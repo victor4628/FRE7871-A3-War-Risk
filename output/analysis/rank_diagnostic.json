@@ -1,0 +1,24 @@
+{
+  "pairs": 17,
+  "series": [
+    "DGS2",
+    "DGS10",
+    "T10YIE",
+    "SP500",
+    "BAMLH0A0HYM2",
+    "DCOILBRENTEU",
+    "DTWEXBGS"
+  ],
+  "standardized_eigenvalues": [
+    -0.5439759759850695,
+    -0.1654313631571218,
+    -0.12003077240322564,
+    0.03030668703444011,
+    0.11541856796424627,
+    1.6573899967124386,
+    4.59165614364324
+  ],
+  "rank1_residual_fraction": 0.12814673003606525,
+  "centered_block_bootstrap_p": 0.461,
+  "test": "PSD rank-one Frobenius residual; centered circular pair-block bootstrap, block length 3, 1999 draws; approximate diagnostic"
+}

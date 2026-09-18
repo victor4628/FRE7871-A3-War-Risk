@@ -1,0 +1,37 @@
+{
+  "pages": 15,
+  "sections": [
+    "Iran war risk and financial sensitivities in 2026",
+    "How the two references fit together",
+    "The financial dataset and replication departures",
+    "News NLP and independent benchmark",
+    "Event selection and nearby controls",
+    "Selected war news developments from January to March",
+    "Selected war news developments from April to August",
+    "Conditional sensitivities replicating Table 2",
+    "Uncertainty and identification diagnostics",
+    "Comparison with the original Iraq war results",
+    "Conditional variance calculations replicating Table 3",
+    "Signed news sensitivities across global markets",
+    "Robustness and market timing",
+    "What the evidence supports",
+    "Sources and reproducibility"
+  ],
+  "text_characters": [
+    1671,
+    2252,
+    1634,
+    1796,
+    1889,
+    1629,
+    1632,
+    1754,
+    1522,
+    1819,
+    1827,
+    1930,
+    1323,
+    2492,
+    2506
+  ]
+}

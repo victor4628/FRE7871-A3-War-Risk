@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": [
+    "Known positive and negative factor loadings recovered in simulation",
+    "IV1 equals difference-of-second-moment estimator",
+    "Disjoint unique event and control days",
+    "Macro dates excluded and prewar/wartime matching enforced",
+    "Yield units and shock normalization checked",
+    "News archive coverage complete",
+    "Sample end obeyed"
+  ],
+  "matched_pairs": 18,
+  "financial_variables": 17
+}

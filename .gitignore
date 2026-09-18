@@ -1,0 +1,4 @@
+tmp/
+data/raw/guardian/
+__pycache__/
+*.pyc

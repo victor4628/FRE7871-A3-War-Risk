@@ -1,0 +1,1822 @@
+[
+  {
+    "date": "2026-01-01",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/01/all",
+    "sha256": "ee72635a0f0d8f9fb2c85ae71410c99ecc19d3502d4129eae8f96f6e07dd1c10",
+    "bytes": 543337,
+    "article_count": 1
+  },
+  {
+    "date": "2026-01-02",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/02/all",
+    "sha256": "01beabbfb459e77d4093f7ec7512f9cdb07d78a0d2f326c645d68bf2ea69b351",
+    "bytes": 549230,
+    "article_count": 2
+  },
+  {
+    "date": "2026-01-03",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/03/all",
+    "sha256": "322dc18d4d15c3f35995b665275269c19ab8ae84184dac3fe0c61af7f47c36ee",
+    "bytes": 549522,
+    "article_count": 2
+  },
+  {
+    "date": "2026-01-04",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/04/all",
+    "sha256": "89baeebd60c9b92691de0311c7d916faed5cbdcbebcc3f377f7a1fe0f42baa51",
+    "bytes": 544917,
+    "article_count": 1
+  },
+  {
+    "date": "2026-01-05",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/05/all",
+    "sha256": "380d12d64d0d928d4ca6907d4293cd9fe2640853ef06868cac17d7a3b166da4d",
+    "bytes": 543752,
+    "article_count": 1
+  },
+  {
+    "date": "2026-01-06",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/06/all",
+    "sha256": "c6b57fd0947d4b98e76f08cad70af359cafcfee48b7036f9b48e471218417dee",
+    "bytes": 554074,
+    "article_count": 2
+  },
+  {
+    "date": "2026-01-07",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/07/all",
+    "sha256": "19ff4a527a570100aa043baecf5bbbb00fd970455b9bfd99c6c5c2c75feda702",
+    "bytes": 554979,
+    "article_count": 3
+  },
+  {
+    "date": "2026-01-08",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/08/all",
+    "sha256": "4913944d7a6f3ad1f20bcf27328bb417d9565d6f74c8caf9434b8db85abf7cdc",
+    "bytes": 554779,
+    "article_count": 3
+  },
+  {
+    "date": "2026-01-09",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/09/all",
+    "sha256": "548fd439e1ae9ac54718cf9f740fc2f980cb0663d4316f155a9dff27b72fc9a1",
+    "bytes": 565828,
+    "article_count": 6
+  },
+  {
+    "date": "2026-01-10",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/10/all",
+    "sha256": "2fdd20bb6de08cf7e87f9e518a9c82520d1d397b7cb4ea62d12029cb2e23d82a",
+    "bytes": 561762,
+    "article_count": 4
+  },
+  {
+    "date": "2026-01-11",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/11/all",
+    "sha256": "fb7dbacf349ffd195353689c89eb5a63aad72852628d8d77328d576bd5d7517b",
+    "bytes": 570124,
+    "article_count": 8
+  },
+  {
+    "date": "2026-01-12",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/12/all",
+    "sha256": "3aea916965917451bdefd8572cbe235fdf21898fdb9b37e2276262fffa463f2a",
+    "bytes": 577138,
+    "article_count": 12
+  },
+  {
+    "date": "2026-01-13",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/13/all",
+    "sha256": "5133fb87bc415f6988974c2a0c07aca97066ec131070be62fd3a47f5ba200ec2",
+    "bytes": 588266,
+    "article_count": 13
+  },
+  {
+    "date": "2026-01-14",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/14/all",
+    "sha256": "b911b39f18554fbc676b1927c9386bf792af3d9d8b32d5299fa7a3de2f35070c",
+    "bytes": 579993,
+    "article_count": 10
+  },
+  {
+    "date": "2026-01-15",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/15/all",
+    "sha256": "1a6bd6dd6ac611239696b2049a8f501475bd8a37abecf35d1f0d634e0cb1cb20",
+    "bytes": 571996,
+    "article_count": 8
+  },
+  {
+    "date": "2026-01-16",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/16/all",
+    "sha256": "36be8cff039d961d6c721898c930339c17941b89b7a08aa34f4520b362289897",
+    "bytes": 571907,
+    "article_count": 6
+  },
+  {
+    "date": "2026-01-17",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/17/all",
+    "sha256": "05954a38243d5211f862466e9359f1165483d1a9f62f3caeaf892daff6d1be37",
+    "bytes": 558542,
+    "article_count": 4
+  },
+  {
+    "date": "2026-01-18",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/18/all",
+    "sha256": "38fb0955c6b51d51c0c034627c6af4d34db8b18e3408c2aedbf5f491308b75cf",
+    "bytes": 555263,
+    "article_count": 3
+  },
+  {
+    "date": "2026-01-19",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/19/all",
+    "sha256": "bb204162d339183924b2b6494f560f27f45f09bcaa158da1fb925d5e0e640422",
+    "bytes": 549320,
+    "article_count": 1
+  },
+  {
+    "date": "2026-01-20",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/20/all",
+    "sha256": "133393719760f91f75faab64f1fe6f5a57b92c7cca39cfcffb73eb51609502c0",
+    "bytes": 550565,
+    "article_count": 2
+  },
+  {
+    "date": "2026-01-21",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/21/all",
+    "sha256": "df8bbdef12adb5c5ee3d2ceb316fa984b29f0800a16cadc487f7f70c98851730",
+    "bytes": 544064,
+    "article_count": 1
+  },
+  {
+    "date": "2026-01-22",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/22/all",
+    "sha256": "df8bbdef12adb5c5ee3d2ceb316fa984b29f0800a16cadc487f7f70c98851730",
+    "bytes": 544064,
+    "article_count": 0
+  },
+  {
+    "date": "2026-01-23",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/23/all",
+    "sha256": "df8bbdef12adb5c5ee3d2ceb316fa984b29f0800a16cadc487f7f70c98851730",
+    "bytes": 544064,
+    "article_count": 0
+  },
+  {
+    "date": "2026-01-24",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/24/all",
+    "sha256": "e704f1e5d342b3784291dad67e897933722e79dc9dfd794ca74c36b0c228ee16",
+    "bytes": 544376,
+    "article_count": 0
+  },
+  {
+    "date": "2026-01-25",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/25/all",
+    "sha256": "4b14084321b69161681126a00f40360ee57a8e9b020f68cc68c6dd1e0a21223d",
+    "bytes": 563234,
+    "article_count": 4
+  },
+  {
+    "date": "2026-01-26",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/26/all",
+    "sha256": "bf57e05e8a294030be96c8588eabbcf9413dbefa5d2fc41ec8876c6d2e1af4bd",
+    "bytes": 554908,
+    "article_count": 3
+  },
+  {
+    "date": "2026-01-27",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/27/all",
+    "sha256": "d310ccf76063fbd14a22c2e5f731cf53558362ec6925de6313a445b820849453",
+    "bytes": 555500,
+    "article_count": 3
+  },
+  {
+    "date": "2026-01-28",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/28/all",
+    "sha256": "03806b0cf0d479c3dcfa5cd51b39858618a0139291de507e79a0b5fcff7b7b6e",
+    "bytes": 559227,
+    "article_count": 3
+  },
+  {
+    "date": "2026-01-29",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/29/all",
+    "sha256": "8b0188ab91480ccffd8f3d3633a36b6359e81aba4d9e839dbfbc3560ca93bfd2",
+    "bytes": 579529,
+    "article_count": 12
+  },
+  {
+    "date": "2026-01-30",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/30/all",
+    "sha256": "a469acb23627e856cecac1f0b45f0a9bd73746104b83975058c7064217191e18",
+    "bytes": 565474,
+    "article_count": 5
+  },
+  {
+    "date": "2026-01-31",
+    "url": "https://www.theguardian.com/world/iran/2026/jan/31/all",
+    "sha256": "a469acb23627e856cecac1f0b45f0a9bd73746104b83975058c7064217191e18",
+    "bytes": 565474,
+    "article_count": 0
+  },
+  {
+    "date": "2026-02-01",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/01/all",
+    "sha256": "fec12acc0cc86f06328ba6f98ad5f9245a914c277fb0e6331940f1a19c113886",
+    "bytes": 543314,
+    "article_count": 1
+  },
+  {
+    "date": "2026-02-02",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/02/all",
+    "sha256": "cf12a83e8c250b7a960498894f892fac0cad19aa285a7b307d15dd3395eb17fe",
+    "bytes": 550176,
+    "article_count": 1
+  },
+  {
+    "date": "2026-02-03",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/03/all",
+    "sha256": "01fa746e5f725f9a7bfc944e70122cf3c9a35a3e901ae4a7f40938a8bbccef36",
+    "bytes": 564154,
+    "article_count": 4
+  },
+  {
+    "date": "2026-02-04",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/04/all",
+    "sha256": "9bee22430a200b31ee5a3d5e8f6761c52b2479e5e93aebc8ed49a129aab2ba72",
+    "bytes": 558934,
+    "article_count": 3
+  },
+  {
+    "date": "2026-02-05",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/05/all",
+    "sha256": "a1a46bb978652cd8d84768a06c0ffbefcc8d4ce49a869d15c250fe10dd59d62b",
+    "bytes": 550069,
+    "article_count": 2
+  },
+  {
+    "date": "2026-02-06",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/06/all",
+    "sha256": "4ff732ffc44c9d35be8c78ae9774f07cdaaa56c91963a97413a71b4e036c2274",
+    "bytes": 550175,
+    "article_count": 2
+  },
+  {
+    "date": "2026-02-07",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/07/all",
+    "sha256": "aa13734cb88b73f41caf911f18b29dce9468fc1798c6db75ed37f20f12146a53",
+    "bytes": 550056,
+    "article_count": 1
+  },
+  {
+    "date": "2026-02-08",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/08/all",
+    "sha256": "ad156c33c251b15b2509e38f3f95024a2013f3c0485450a41177487ca69b7a63",
+    "bytes": 544078,
+    "article_count": 1
+  },
+  {
+    "date": "2026-02-09",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/09/all",
+    "sha256": "70c340e67df07d67a2c1673880379ae430d5b2230b61967dda28341f69603193",
+    "bytes": 550210,
+    "article_count": 2
+  },
+  {
+    "date": "2026-02-10",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/10/all",
+    "sha256": "875a607ef12392331ae3bd45604aaa46e59614bee4af52ecd760a6a7f8c3c2eb",
+    "bytes": 550290,
+    "article_count": 2
+  },
+  {
+    "date": "2026-02-11",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/11/all",
+    "sha256": "40e612fa7bc61a0b9cb2e98226a711bedb9a11f65aaa4e938739ada47ac48fb3",
+    "bytes": 550118,
+    "article_count": 2
+  },
+  {
+    "date": "2026-02-12",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/12/all",
+    "sha256": "3a3276026078775e1dbed776e484d31d08b8fe2b9f4f3817288d479241ab4e53",
+    "bytes": 550506,
+    "article_count": 1
+  },
+  {
+    "date": "2026-02-13",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/13/all",
+    "sha256": "b52396050a3938bbd28943a7096f5a85ca40a591c1b5c5fdc5aa1f9a8b7e85ae",
+    "bytes": 544738,
+    "article_count": 1
+  },
+  {
+    "date": "2026-02-14",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/14/all",
+    "sha256": "3f8c94bd4746630c5a7316ed04161a1c9828842407e1e5ed2e0682883eae9241",
+    "bytes": 550487,
+    "article_count": 2
+  },
+  {
+    "date": "2026-02-15",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/15/all",
+    "sha256": "d4079ad247027a3d40f899ed3e0d106d82a63a676bad54097e68cf160c5ce891",
+    "bytes": 555034,
+    "article_count": 3
+  },
+  {
+    "date": "2026-02-16",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/16/all",
+    "sha256": "ec7ef4fb8564eb2232de94f976e9a42b5e933b3f0b81bc2c612a88cd72e9a232",
+    "bytes": 544579,
+    "article_count": 1
+  },
+  {
+    "date": "2026-02-17",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/17/all",
+    "sha256": "069499948beba851dc9c39cea0af82f3232b4aa634861fed0323a9fa03cd1b14",
+    "bytes": 559062,
+    "article_count": 3
+  },
+  {
+    "date": "2026-02-18",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/18/all",
+    "sha256": "a41c87d3db1fbf0b16568a40edba3639f417f506d648136f6b4fb74caeab45c1",
+    "bytes": 544421,
+    "article_count": 0
+  },
+  {
+    "date": "2026-02-19",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/19/all",
+    "sha256": "f711ced88381d47d19b345381e553be6038768b8406c821eb3e70a08237f21af",
+    "bytes": 561826,
+    "article_count": 4
+  },
+  {
+    "date": "2026-02-20",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/20/all",
+    "sha256": "7ec939b246b02faec71fe29a3dbd092ebe9cbb7ff273559674feff83177e5c91",
+    "bytes": 554998,
+    "article_count": 1
+  },
+  {
+    "date": "2026-02-21",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/21/all",
+    "sha256": "4920c319a01a40d831a19ff925523a782457e14701adef2644aed2c9f538a974",
+    "bytes": 554834,
+    "article_count": 2
+  },
+  {
+    "date": "2026-02-22",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/22/all",
+    "sha256": "8b57a8be06c53a6e78f9190b947261eddc49312231df6f6875429c9d5eb3b7a6",
+    "bytes": 555397,
+    "article_count": 2
+  },
+  {
+    "date": "2026-02-23",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/23/all",
+    "sha256": "696c1f5517885cf28d852ebd2abe8614ea42cf78b8ecbc41e67da2f85b70e7b3",
+    "bytes": 558613,
+    "article_count": 4
+  },
+  {
+    "date": "2026-02-24",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/24/all",
+    "sha256": "c8f38a8c35044d30fd3e1cfe9f56ad69290704915c77838493f038447c5bb4f9",
+    "bytes": 560996,
+    "article_count": 3
+  },
+  {
+    "date": "2026-02-25",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/25/all",
+    "sha256": "8dc66041f50b1d0e1d7cf4426a29cb48468ea5281001e121245f8bd09f48c502",
+    "bytes": 559210,
+    "article_count": 3
+  },
+  {
+    "date": "2026-02-26",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/26/all",
+    "sha256": "4fdf1539ce742818536be10899895852a59ee37b412da5b17d567dde26df7261",
+    "bytes": 563306,
+    "article_count": 5
+  },
+  {
+    "date": "2026-02-27",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/27/all",
+    "sha256": "1a4cbcc54caa5cf795be5029ae26636ab8808a022719c7103f874185bd313b07",
+    "bytes": 559293,
+    "article_count": 4
+  },
+  {
+    "date": "2026-02-28",
+    "url": "https://www.theguardian.com/world/iran/2026/feb/28/all",
+    "sha256": "5313693f1fb650fc66e818815cd4772ad4eddcc48c7d2a5de0af581c49114825",
+    "bytes": 606092,
+    "article_count": 23
+  },
+  {
+    "date": "2026-03-01",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/01/all",
+    "sha256": "a22d6566041dac53bd7e9ba0977ff1ea94f9a05a07783addb798194fb614dcd2",
+    "bytes": 658883,
+    "article_count": 39
+  },
+  {
+    "date": "2026-03-02",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/02/all",
+    "sha256": "4a3c74e6cb748ad7faf473b67f7d152e3b269f4f5c3dc436528d74f9f04c76e3",
+    "bytes": 655215,
+    "article_count": 46
+  },
+  {
+    "date": "2026-03-03",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/03/all",
+    "sha256": "683c266815b92f09a33e9b56df786f428c106a7763fa89a3fe4823f0f4e2fc16",
+    "bytes": 655009,
+    "article_count": 45
+  },
+  {
+    "date": "2026-03-04",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/04/all",
+    "sha256": "0a0d72a55b39b942c0cd4a0ede6ea17c74e881f17b7f0d990e7bda918ee38ab7",
+    "bytes": 631010,
+    "article_count": 32
+  },
+  {
+    "date": "2026-03-05",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/05/all",
+    "sha256": "a50c4193291e9c86cfd5e44ef8e964c9930829f43285a9af1d830b0ba24c2f89",
+    "bytes": 639430,
+    "article_count": 31
+  },
+  {
+    "date": "2026-03-06",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/06/all",
+    "sha256": "8ca240d1af63063cf50c29f96977594fc7ec8665f741917ef89959cc891e4c20",
+    "bytes": 618988,
+    "article_count": 25
+  },
+  {
+    "date": "2026-03-07",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/07/all",
+    "sha256": "914692b637504a29acc6ab6735a3ce09636cd7baa19ee89d17a267b15e5dac7a",
+    "bytes": 593357,
+    "article_count": 15
+  },
+  {
+    "date": "2026-03-08",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/08/all",
+    "sha256": "ec4d884f669449b090633d37912e5cde58165bccd0622c1b017ff692024bf0a3",
+    "bytes": 583186,
+    "article_count": 14
+  },
+  {
+    "date": "2026-03-09",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/09/all",
+    "sha256": "18ce014dcd0c901987fffe7d0527d939e1c3420b1963f6cc76120676eead4dca",
+    "bytes": 606633,
+    "article_count": 23
+  },
+  {
+    "date": "2026-03-10",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/10/all",
+    "sha256": "91e7a90cf115fbe23f55f0c56974956aef24b1236646a40d1cb28c7896620224",
+    "bytes": 629583,
+    "article_count": 30
+  },
+  {
+    "date": "2026-03-11",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/11/all",
+    "sha256": "5515a2bf27b0cb2e2a261585fab8681fdc186b51b1d3d5a6b5faca2efd15ad0f",
+    "bytes": 634998,
+    "article_count": 33
+  },
+  {
+    "date": "2026-03-12",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/12/all",
+    "sha256": "90307642715aee0ceb9045d2fb8d379650bc4b0858dbec96028a2b25a3f8cc7a",
+    "bytes": 611396,
+    "article_count": 26
+  },
+  {
+    "date": "2026-03-13",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/13/all",
+    "sha256": "e9face836536cca371f5d1789819a8dea532960bae2a1842db57fe2ada2548a6",
+    "bytes": 604772,
+    "article_count": 18
+  },
+  {
+    "date": "2026-03-14",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/14/all",
+    "sha256": "1d9c48d46e79188a71c40a9ec4088b01baf1eba0346a96043634ac6c709cc96a",
+    "bytes": 598816,
+    "article_count": 15
+  },
+  {
+    "date": "2026-03-15",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/15/all",
+    "sha256": "97dff8d98a81a6fcff2ef890077ee51bb3847399098625d1b47afa7b20209f67",
+    "bytes": 602516,
+    "article_count": 21
+  },
+  {
+    "date": "2026-03-16",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/16/all",
+    "sha256": "28f090c28c6253404e8e17107b84be67242d79e3d965b6d447722cb0f8603495",
+    "bytes": 606540,
+    "article_count": 22
+  },
+  {
+    "date": "2026-03-17",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/17/all",
+    "sha256": "c3f16bf029ec8b7276e5768a05da7be51226ece98b69da02549dd15490fd9b12",
+    "bytes": 595747,
+    "article_count": 18
+  },
+  {
+    "date": "2026-03-18",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/18/all",
+    "sha256": "c32fcdfbc076aa5614187108ddeab5c596f341aecc1f3bdd8a54b7e92e170405",
+    "bytes": 589337,
+    "article_count": 15
+  },
+  {
+    "date": "2026-03-19",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/19/all",
+    "sha256": "7adac89e7b8686f7e5b5bf74ee69fb06512cb0af91262ca82107730c46983901",
+    "bytes": 598414,
+    "article_count": 17
+  },
+  {
+    "date": "2026-03-20",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/20/all",
+    "sha256": "facf87bd24bb96b436d2281238e157028f3771e8ffeadb13bf97dcee1280a5bd",
+    "bytes": 592512,
+    "article_count": 14
+  },
+  {
+    "date": "2026-03-21",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/21/all",
+    "sha256": "e60ca2d75bd0aa74a2a59b090f35ab38b27ec5df409353988c8edd51ba0ffa2e",
+    "bytes": 569465,
+    "article_count": 5
+  },
+  {
+    "date": "2026-03-22",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/22/all",
+    "sha256": "e63149d11e65de4f94f59a675d581d9a19233b60d5ce12cb971ec2a0318a94b5",
+    "bytes": 579266,
+    "article_count": 11
+  },
+  {
+    "date": "2026-03-23",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/23/all",
+    "sha256": "45a822c61498688a15061aea3e4411d7eecf6388632a658515ffdb10e06ea239",
+    "bytes": 585678,
+    "article_count": 14
+  },
+  {
+    "date": "2026-03-24",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/24/all",
+    "sha256": "580c072b3fb6ac23ea12cd3aaf7d433166f4ae874622ddab8c250a194b2fc3a2",
+    "bytes": 580715,
+    "article_count": 11
+  },
+  {
+    "date": "2026-03-25",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/25/all",
+    "sha256": "006a2b301ff6c03ae6f42f8a91934345a36fed3b9f31b02e01050e61410b704f",
+    "bytes": 585889,
+    "article_count": 12
+  },
+  {
+    "date": "2026-03-26",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/26/all",
+    "sha256": "d87c1dc3c79a1da7f5db6740ed8ded25de07c15eab34ec4dc7072e322daa6335",
+    "bytes": 588729,
+    "article_count": 13
+  },
+  {
+    "date": "2026-03-27",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/27/all",
+    "sha256": "c7183132e8c02c3bc54034826f3a593efbba53cde3553135f1ca38b4fc9f5c5a",
+    "bytes": 586794,
+    "article_count": 13
+  },
+  {
+    "date": "2026-03-28",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/28/all",
+    "sha256": "822dcda0fa71c5ad517eb68b127a2d37265a075d70a6940f8f8d176fac62aceb",
+    "bytes": 561352,
+    "article_count": 3
+  },
+  {
+    "date": "2026-03-29",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/29/all",
+    "sha256": "5d23c14764c3a93740473655b8d5b8fc0c4f439e37534de18dc8a9c8970f1f0a",
+    "bytes": 575131,
+    "article_count": 8
+  },
+  {
+    "date": "2026-03-30",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/30/all",
+    "sha256": "1daa335735499a7ff99764defee60bcf44130f6f2f3adf4f713dd8cda81799f7",
+    "bytes": 590261,
+    "article_count": 15
+  },
+  {
+    "date": "2026-03-31",
+    "url": "https://www.theguardian.com/world/iran/2026/mar/31/all",
+    "sha256": "715eb898f1059154e82f82e64417dc92f26d5c3395cf476dc1c66f3887bc1228",
+    "bytes": 574980,
+    "article_count": 9
+  },
+  {
+    "date": "2026-04-01",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/01/all",
+    "sha256": "1667081f2e7239305d8cca1da86404736bfed23a018dd693b7cc964a42de304c",
+    "bytes": 585021,
+    "article_count": 11
+  },
+  {
+    "date": "2026-04-02",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/02/all",
+    "sha256": "be306de58078e9f3a7021ddaff46c3559f1a76487f90a7aaab70dc6e2fbbfee6",
+    "bytes": 597579,
+    "article_count": 18
+  },
+  {
+    "date": "2026-04-03",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/03/all",
+    "sha256": "b5a0561fd8018a05cc1e5bcc3e73f0e562ffb764d5584c6081ffd62b09439d05",
+    "bytes": 576113,
+    "article_count": 9
+  },
+  {
+    "date": "2026-04-04",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/04/all",
+    "sha256": "60c3dc39277c5c76a092267fccf2925f24c84969838fdefb48e9a0a6ef65378d",
+    "bytes": 568401,
+    "article_count": 7
+  },
+  {
+    "date": "2026-04-05",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/05/all",
+    "sha256": "ab00f02647a869b8b049935d96a04f10f7cdaf3522e756a73b4c9cbd5f493331",
+    "bytes": 563505,
+    "article_count": 4
+  },
+  {
+    "date": "2026-04-06",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/06/all",
+    "sha256": "294f41627bc381b441c11f4aa3d9c03237472218d42a1b8a29e0b9032fb85425",
+    "bytes": 581395,
+    "article_count": 12
+  },
+  {
+    "date": "2026-04-07",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/07/all",
+    "sha256": "b3d58694c5b144588139a02974ab906e0583d8f480de2a8d5fbbc199582d65ee",
+    "bytes": 594739,
+    "article_count": 16
+  },
+  {
+    "date": "2026-04-08",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/08/all",
+    "sha256": "c280e4e318eb7a689f701e1328c04b0ff5721fae79959697dbcc28f0035f7c9f",
+    "bytes": 629767,
+    "article_count": 30
+  },
+  {
+    "date": "2026-04-09",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/09/all",
+    "sha256": "6be1b4789bc37a52677450820935112f19e2a4dc19a9bad3b0e32fceb906e3db",
+    "bytes": 593304,
+    "article_count": 15
+  },
+  {
+    "date": "2026-04-10",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/10/all",
+    "sha256": "f3e7eeabf63efbe078334e528f44ef2719515cd4c837e1211b320a41483a427e",
+    "bytes": 587524,
+    "article_count": 13
+  },
+  {
+    "date": "2026-04-11",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/11/all",
+    "sha256": "0bfdc29f74b66d9c6fb027c615abd836ea254b4cfb66f9725d2d35d554d5ecfe",
+    "bytes": 567833,
+    "article_count": 6
+  },
+  {
+    "date": "2026-04-12",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/12/all",
+    "sha256": "ccf46833a7bbff607ad758b00d095825dc14612c7d2a545cdad63b477f752d37",
+    "bytes": 564109,
+    "article_count": 5
+  },
+  {
+    "date": "2026-04-13",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/13/all",
+    "sha256": "ad2c496c566389cb2ce131fd74950923258e593003cfdfd6e7ac7cc2c6aee9fe",
+    "bytes": 576328,
+    "article_count": 10
+  },
+  {
+    "date": "2026-04-14",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/14/all",
+    "sha256": "86b51845492336d12a1954e09cd4ead4a11aa96072bb5bf24e4719a32dd7197c",
+    "bytes": 571730,
+    "article_count": 7
+  },
+  {
+    "date": "2026-04-15",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/15/all",
+    "sha256": "d55aef7adcbfb8953df2502bf7556211bd36ce679347c1ecb9b143d07e0e89e9",
+    "bytes": 571246,
+    "article_count": 7
+  },
+  {
+    "date": "2026-04-16",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/16/all",
+    "sha256": "72f1e876aafd668c6bb350a38afb40b06f9d6d58580ad03abe551e5ca70de46a",
+    "bytes": 575865,
+    "article_count": 9
+  },
+  {
+    "date": "2026-04-17",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/17/all",
+    "sha256": "e7b9068588921be15f565203e9cf85e40e85a99a9d267b64e32ea698bb969043",
+    "bytes": 567925,
+    "article_count": 6
+  },
+  {
+    "date": "2026-04-18",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/18/all",
+    "sha256": "9465f65b700559c8e6cc9d32301e7dbd28ce22b0f7548d32d7be4fee56cebdee",
+    "bytes": 563263,
+    "article_count": 3
+  },
+  {
+    "date": "2026-04-19",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/19/all",
+    "sha256": "0ecc91e79d7209e6e333588f73fe124beda4cc3d17ef80f1848017f76e530f29",
+    "bytes": 565867,
+    "article_count": 5
+  },
+  {
+    "date": "2026-04-20",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/20/all",
+    "sha256": "608baf8e09396e3b4599514e42196068b2a5ed642e5b91f45d45e5afd88cb043",
+    "bytes": 573468,
+    "article_count": 8
+  },
+  {
+    "date": "2026-04-21",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/21/all",
+    "sha256": "67533d9d4603d0fc2a08fd72ef32868522ef88d66b58520207c74c19f48f63a2",
+    "bytes": 572029,
+    "article_count": 7
+  },
+  {
+    "date": "2026-04-22",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/22/all",
+    "sha256": "cfa2f62451bb6df3f4b05e8c32f89fc5cca2fdbfe50298a1dddc38d4abde0794",
+    "bytes": 577436,
+    "article_count": 10
+  },
+  {
+    "date": "2026-04-23",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/23/all",
+    "sha256": "211263670da36f9762bcf9c15fb684882993b82d5e7c83c11ebe5a320eb9e20b",
+    "bytes": 570994,
+    "article_count": 8
+  },
+  {
+    "date": "2026-04-24",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/24/all",
+    "sha256": "a49e8fead04da2bfe059b02c7aaea249bd843d79b1f100e34dd785c4ae5a1929",
+    "bytes": 575392,
+    "article_count": 9
+  },
+  {
+    "date": "2026-04-25",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/25/all",
+    "sha256": "dae84fe0a6d323b3c97568f46c59215882147ef227eb02b0f7843effc58fc236",
+    "bytes": 554767,
+    "article_count": 3
+  },
+  {
+    "date": "2026-04-26",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/26/all",
+    "sha256": "76755be19b229d4d888ef8ba5ff4d790fdb65d04c0854874d1d354428617672f",
+    "bytes": 561760,
+    "article_count": 4
+  },
+  {
+    "date": "2026-04-27",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/27/all",
+    "sha256": "740f9c5f6240728c3359c6f67d7a0d17f835c4d348502a881cd908e444e9e791",
+    "bytes": 555745,
+    "article_count": 3
+  },
+  {
+    "date": "2026-04-28",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/28/all",
+    "sha256": "0964377e75193a30f8a4ade65a1a8eda50dce514fb26050da0185ac5dbe56c8a",
+    "bytes": 562242,
+    "article_count": 5
+  },
+  {
+    "date": "2026-04-29",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/29/all",
+    "sha256": "264236242b3aa5a794cbb4d24306d861c73d7d7483ed3423147044eae680674f",
+    "bytes": 569752,
+    "article_count": 9
+  },
+  {
+    "date": "2026-04-30",
+    "url": "https://www.theguardian.com/world/iran/2026/apr/30/all",
+    "sha256": "b8c182e9a964d1bf977a62410ada91a676c896307a773c7f624fb2ca75492b6d",
+    "bytes": 564596,
+    "article_count": 6
+  },
+  {
+    "date": "2026-05-01",
+    "url": "https://www.theguardian.com/world/iran/2026/may/01/all",
+    "sha256": "89dca2d12fd6a6984585830c1da645a0f7522b75ff148f7ef64b4462e5e21abe",
+    "bytes": 565920,
+    "article_count": 5
+  },
+  {
+    "date": "2026-05-02",
+    "url": "https://www.theguardian.com/world/iran/2026/may/02/all",
+    "sha256": "0e712ca04d217c8e176b5c50689cfcd9f5900efc515400ff7868f574c3b555b3",
+    "bytes": 558652,
+    "article_count": 3
+  },
+  {
+    "date": "2026-05-03",
+    "url": "https://www.theguardian.com/world/iran/2026/may/03/all",
+    "sha256": "bc93ad2f9d2545dc795fbfeeb6dfd13b00a6171dd93761ea4aabdb6bb9979a3c",
+    "bytes": 544547,
+    "article_count": 1
+  },
+  {
+    "date": "2026-05-04",
+    "url": "https://www.theguardian.com/world/iran/2026/may/04/all",
+    "sha256": "46dc0f7c67d9b42a22a123ea90e7a6003e8759c6d02ca50980837d3bb32ced19",
+    "bytes": 563147,
+    "article_count": 6
+  },
+  {
+    "date": "2026-05-05",
+    "url": "https://www.theguardian.com/world/iran/2026/may/05/all",
+    "sha256": "fb11c104a6599451c3c2e657c9d30aaa06aae96793d6fb08c7c8143ca7e33345",
+    "bytes": 573475,
+    "article_count": 9
+  },
+  {
+    "date": "2026-05-06",
+    "url": "https://www.theguardian.com/world/iran/2026/may/06/all",
+    "sha256": "b71b7a3f486fedf141fb8fc260eac50d7f5bf3654fff82fb9d7ed6675694afec",
+    "bytes": 581362,
+    "article_count": 12
+  },
+  {
+    "date": "2026-05-07",
+    "url": "https://www.theguardian.com/world/iran/2026/may/07/all",
+    "sha256": "3bbdeef7677e2d830f17e3b96cb58d3aeb8932ead08de6297fa4b26eaccb9fa7",
+    "bytes": 571800,
+    "article_count": 7
+  },
+  {
+    "date": "2026-05-08",
+    "url": "https://www.theguardian.com/world/iran/2026/may/08/all",
+    "sha256": "81bf2e3171cc8da44f8ce723aecef2dd439267098fdf1d140f5c088a96b118ec",
+    "bytes": 562913,
+    "article_count": 4
+  },
+  {
+    "date": "2026-05-09",
+    "url": "https://www.theguardian.com/world/iran/2026/may/09/all",
+    "sha256": "7c7a63046b3443bc5997dab870c777cfcff1bf96c06dda76f807f4251a001d6c",
+    "bytes": 554822,
+    "article_count": 1
+  },
+  {
+    "date": "2026-05-10",
+    "url": "https://www.theguardian.com/world/iran/2026/may/10/all",
+    "sha256": "f054e53e18cbee1d96f5b424276cce88db0ce9497df787261a615391ac6ea0cc",
+    "bytes": 569250,
+    "article_count": 7
+  },
+  {
+    "date": "2026-05-11",
+    "url": "https://www.theguardian.com/world/iran/2026/may/11/all",
+    "sha256": "25a534d713e5c4d36ea17a8ed5459b77100fa48cc0ab136136699efdebf08fba",
+    "bytes": 544850,
+    "article_count": 1
+  },
+  {
+    "date": "2026-05-12",
+    "url": "https://www.theguardian.com/world/iran/2026/may/12/all",
+    "sha256": "4a42a217840746b732ae5b42302510198ac529e7b42eced89fa352cd39fc5637",
+    "bytes": 565476,
+    "article_count": 6
+  },
+  {
+    "date": "2026-05-13",
+    "url": "https://www.theguardian.com/world/iran/2026/may/13/all",
+    "sha256": "350e69e75c4497786d1d8d11e5f041547d0e1c1173e02e0b7e9ce5c6a7c7893a",
+    "bytes": 561714,
+    "article_count": 5
+  },
+  {
+    "date": "2026-05-14",
+    "url": "https://www.theguardian.com/world/iran/2026/may/14/all",
+    "sha256": "794e9c82802f8ea7841925cc6f66c4fd7334fbdfbb2264d014a4b7ee624ca110",
+    "bytes": 565508,
+    "article_count": 3
+  },
+  {
+    "date": "2026-05-15",
+    "url": "https://www.theguardian.com/world/iran/2026/may/15/all",
+    "sha256": "901a28710dfb156d90c1b2b029ad5646b86749736a7e26aba1dbd66bb37bb7d1",
+    "bytes": 558920,
+    "article_count": 4
+  },
+  {
+    "date": "2026-05-16",
+    "url": "https://www.theguardian.com/world/iran/2026/may/16/all",
+    "sha256": "cda46fe31945886cfee154409dad5d40fcfccdc79cc468a67b2f4fb32cf161b6",
+    "bytes": 550068,
+    "article_count": 1
+  },
+  {
+    "date": "2026-05-17",
+    "url": "https://www.theguardian.com/world/iran/2026/may/17/all",
+    "sha256": "cda46fe31945886cfee154409dad5d40fcfccdc79cc468a67b2f4fb32cf161b6",
+    "bytes": 550068,
+    "article_count": 0
+  },
+  {
+    "date": "2026-05-18",
+    "url": "https://www.theguardian.com/world/iran/2026/may/18/all",
+    "sha256": "ede332b2059fa008139d9d1ac3da598dd47644a6c4d521f2dd9bca2f708fc30e",
+    "bytes": 558906,
+    "article_count": 3
+  },
+  {
+    "date": "2026-05-19",
+    "url": "https://www.theguardian.com/world/iran/2026/may/19/all",
+    "sha256": "b24f82a524e0ed36b7041372c952cb55f135c43c1b3367fc83e484b65114ca08",
+    "bytes": 561175,
+    "article_count": 4
+  },
+  {
+    "date": "2026-05-20",
+    "url": "https://www.theguardian.com/world/iran/2026/may/20/all",
+    "sha256": "ff031a31d32d27b961af1c258bd3b50332a0925a3c562ef17a89978af5929671",
+    "bytes": 563447,
+    "article_count": 6
+  },
+  {
+    "date": "2026-05-21",
+    "url": "https://www.theguardian.com/world/iran/2026/may/21/all",
+    "sha256": "ea10540a95cd93f9a01406b1aab1256afc5cf95e5881cf09c21680465d5c33c0",
+    "bytes": 544413,
+    "article_count": 1
+  },
+  {
+    "date": "2026-05-22",
+    "url": "https://www.theguardian.com/world/iran/2026/may/22/all",
+    "sha256": "c4b3c1b699159d9cf3196cf25240e5f3143319b853100c9b3f0d611dc6e77338",
+    "bytes": 544059,
+    "article_count": 1
+  },
+  {
+    "date": "2026-05-23",
+    "url": "https://www.theguardian.com/world/iran/2026/may/23/all",
+    "sha256": "ffc6782adf85fa4a0f5d15f1d91c1b1d4b50aa7b258262fecdc9c3d8472df9a4",
+    "bytes": 555214,
+    "article_count": 2
+  },
+  {
+    "date": "2026-05-24",
+    "url": "https://www.theguardian.com/world/iran/2026/may/24/all",
+    "sha256": "332f230f02e956c5c3f9c61b6573665b95baa04ff02fe6995ca5d3dec8e59db1",
+    "bytes": 563666,
+    "article_count": 5
+  },
+  {
+    "date": "2026-05-25",
+    "url": "https://www.theguardian.com/world/iran/2026/may/25/all",
+    "sha256": "eaab436baf02137d0d501fa969e89edde552d349120e784ed2f2a3203bc96bbc",
+    "bytes": 563428,
+    "article_count": 5
+  },
+  {
+    "date": "2026-05-26",
+    "url": "https://www.theguardian.com/world/iran/2026/may/26/all",
+    "sha256": "efa37d8d4f0e1565d8e651557c70bba52311f9cab40c059b12bb966cecd8c011",
+    "bytes": 570874,
+    "article_count": 7
+  },
+  {
+    "date": "2026-05-27",
+    "url": "https://www.theguardian.com/world/iran/2026/may/27/all",
+    "sha256": "7d63066f1efd1bae5548d34521acb813c6028e777b63299589a2b546bea0f0d9",
+    "bytes": 561741,
+    "article_count": 5
+  },
+  {
+    "date": "2026-05-28",
+    "url": "https://www.theguardian.com/world/iran/2026/may/28/all",
+    "sha256": "a746ef9cf4a9f1caa26f18745ba8b1319680ca5d75d1ce742aafc5d0f039e5c1",
+    "bytes": 563833,
+    "article_count": 5
+  },
+  {
+    "date": "2026-05-29",
+    "url": "https://www.theguardian.com/world/iran/2026/may/29/all",
+    "sha256": "6b85a6a34c3d0f76b82905d7a22080069e76b568b3757eec5dc496d34386d072",
+    "bytes": 566761,
+    "article_count": 5
+  },
+  {
+    "date": "2026-05-30",
+    "url": "https://www.theguardian.com/world/iran/2026/may/30/all",
+    "sha256": "15279201929799ad4b30f5843bae7709617f0cdf723dc2674275b5b46624b36d",
+    "bytes": 554727,
+    "article_count": 3
+  },
+  {
+    "date": "2026-05-31",
+    "url": "https://www.theguardian.com/world/iran/2026/may/31/all",
+    "sha256": "b1a3f9550521031c3895ebea26bc83cadb714c78c5e967354f333603310a1387",
+    "bytes": 555415,
+    "article_count": 3
+  },
+  {
+    "date": "2026-06-01",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/01/all",
+    "sha256": "a39dfd0a9f332049353741fff11aa23ff969a3d368142c68f3b53aa8832bca7c",
+    "bytes": 562555,
+    "article_count": 5
+  },
+  {
+    "date": "2026-06-02",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/02/all",
+    "sha256": "06322016213c9624a06872ec0989b71c24881235b3dd3a1091107460e04a9f49",
+    "bytes": 565641,
+    "article_count": 6
+  },
+  {
+    "date": "2026-06-03",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/03/all",
+    "sha256": "c69a15fb183798c170a1b0e59dadb6711ad820ea2ebeda8c31ed4c4c2d2a07a6",
+    "bytes": 565623,
+    "article_count": 6
+  },
+  {
+    "date": "2026-06-04",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/04/all",
+    "sha256": "bbc2a31d703a60c7a42fc8f64ca75c29ca5885e45bc32d312d7a3eb653909036",
+    "bytes": 577305,
+    "article_count": 9
+  },
+  {
+    "date": "2026-06-05",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/05/all",
+    "sha256": "b0ba057414074b65ce14371de54a2d682cfa514f88f5387c5ece92c2f8649f4b",
+    "bytes": 559524,
+    "article_count": 4
+  },
+  {
+    "date": "2026-06-06",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/06/all",
+    "sha256": "5e4101b3dcbcd3c55f9550c018acae1530fb9710b9e504f0b3a2a256c183226d",
+    "bytes": 554755,
+    "article_count": 3
+  },
+  {
+    "date": "2026-06-07",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/07/all",
+    "sha256": "5765f9d5528ee57cd545ea1c5d72cbc7ea0e632d5df591e60332052658f56e5b",
+    "bytes": 559534,
+    "article_count": 4
+  },
+  {
+    "date": "2026-06-08",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/08/all",
+    "sha256": "98e22403b3018991eb9e68215e6c5b07ce8cd3c49226504ae2e5ed066c30e1cf",
+    "bytes": 572789,
+    "article_count": 10
+  },
+  {
+    "date": "2026-06-09",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/09/all",
+    "sha256": "442510b28e19333248cdef07d26ba1c3bf3646bcb2077efe487c6c5c3f4ca13c",
+    "bytes": 560988,
+    "article_count": 5
+  },
+  {
+    "date": "2026-06-10",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/10/all",
+    "sha256": "b8d4542ee00f54c79bd03479be1daed67c9c3362b1ac39aa7e0135e6351bd7e5",
+    "bytes": 569604,
+    "article_count": 5
+  },
+  {
+    "date": "2026-06-11",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/11/all",
+    "sha256": "ea6e352d2ca83df7f3e2ce281ca8065276a1afb0f76d1e210b5482984afad5f4",
+    "bytes": 568955,
+    "article_count": 6
+  },
+  {
+    "date": "2026-06-12",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/12/all",
+    "sha256": "ea5f02edb139125f566471377f14899af786f9dd802667158f9d3563c654d252",
+    "bytes": 563204,
+    "article_count": 4
+  },
+  {
+    "date": "2026-06-13",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/13/all",
+    "sha256": "0669e562338be5e07fa553583f167f06964481d8ff1a18a6c3eae9dee78a5c81",
+    "bytes": 550254,
+    "article_count": 1
+  },
+  {
+    "date": "2026-06-14",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/14/all",
+    "sha256": "99bdb9bf4fefeed588df474a7ed7e353ce0280a0fc3d31289c2ae4937f93ff52",
+    "bytes": 544787,
+    "article_count": 1
+  },
+  {
+    "date": "2026-06-15",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/15/all",
+    "sha256": "078961f954950b518e02dcd463518ecbc2647623bad876cb23d855dc8b601b5a",
+    "bytes": 601265,
+    "article_count": 20
+  },
+  {
+    "date": "2026-06-16",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/16/all",
+    "sha256": "38c70ecd3a72213996439d8a5120d92396144a58b76d09a819694035128747ba",
+    "bytes": 582468,
+    "article_count": 12
+  },
+  {
+    "date": "2026-06-17",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/17/all",
+    "sha256": "5af700eb1ba0061b27478aeed342cb6dca15d7f43fefb978a139b8e8945ffcce",
+    "bytes": 564016,
+    "article_count": 6
+  },
+  {
+    "date": "2026-06-18",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/18/all",
+    "sha256": "e607abd2562215f6c6b9fd17d43771494be0646df9e09de022e3cafb73dfdeaf",
+    "bytes": 593076,
+    "article_count": 15
+  },
+  {
+    "date": "2026-06-19",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/19/all",
+    "sha256": "48cf61ce7993172d0576e865fdd87f2c619506d4c1c89519aad99ff9b9549f5c",
+    "bytes": 567122,
+    "article_count": 7
+  },
+  {
+    "date": "2026-06-20",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/20/all",
+    "sha256": "8ac2dd5995673ff289b62afa9e7b5d4e52b8733e9ce9c08f89958f88027a7a5a",
+    "bytes": 559152,
+    "article_count": 3
+  },
+  {
+    "date": "2026-06-21",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/21/all",
+    "sha256": "f445778ab4b02f6204e934a1561cc44802ee94794d9e2655638e764136688369",
+    "bytes": 566931,
+    "article_count": 7
+  },
+  {
+    "date": "2026-06-22",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/22/all",
+    "sha256": "dbadc269d69f4c657bb6367c10c4d99081de4943f4db18caaebdf4409cb2e327",
+    "bytes": 566099,
+    "article_count": 6
+  },
+  {
+    "date": "2026-06-23",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/23/all",
+    "sha256": "ebd2ecc9f2601e263309c0c718feec306b068ff6c78da2126e25401f9d666fa0",
+    "bytes": 561886,
+    "article_count": 4
+  },
+  {
+    "date": "2026-06-24",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/24/all",
+    "sha256": "2998be9c2cadeab8347205bf0ee7645dd9a29afcfc9f15dce443cef8f4102d35",
+    "bytes": 544497,
+    "article_count": 1
+  },
+  {
+    "date": "2026-06-25",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/25/all",
+    "sha256": "7796a548232ef3d86baea0d109eb43689938fafec5722c17627659fcbf06c5c6",
+    "bytes": 559303,
+    "article_count": 4
+  },
+  {
+    "date": "2026-06-26",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/26/all",
+    "sha256": "5e5626553a5f85415314191a46757df4594b6ed5b35afec03ad2f799db7fdecf",
+    "bytes": 562083,
+    "article_count": 4
+  },
+  {
+    "date": "2026-06-27",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/27/all",
+    "sha256": "0a9bcb6ce58eb8c06c61aee3c848853d13e3d53fe2b34a58540cdd06ad23895d",
+    "bytes": 550037,
+    "article_count": 2
+  },
+  {
+    "date": "2026-06-28",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/28/all",
+    "sha256": "8838d870391064cb507d3620d68d57dcebdbd2c750c7cf07059a701f04fd5749",
+    "bytes": 563880,
+    "article_count": 5
+  },
+  {
+    "date": "2026-06-29",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/29/all",
+    "sha256": "ff702edaa482b5c3b4ef0c8b6e0b9ba1f77a61f14160f671b18877ff554087fe",
+    "bytes": 554527,
+    "article_count": 2
+  },
+  {
+    "date": "2026-06-30",
+    "url": "https://www.theguardian.com/world/iran/2026/jun/30/all",
+    "sha256": "eb8d28c152ede7fba2eccf71a7d0221e097e3b7e42cc6dee6f3d9e277c7bf2aa",
+    "bytes": 549902,
+    "article_count": 2
+  },
+  {
+    "date": "2026-07-01",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/01/all",
+    "sha256": "838c72e1594f6cf97e19988b475cbf66aec6e9d47be48dd5d05091079c0ba756",
+    "bytes": 544513,
+    "article_count": 1
+  },
+  {
+    "date": "2026-07-02",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/02/all",
+    "sha256": "838c72e1594f6cf97e19988b475cbf66aec6e9d47be48dd5d05091079c0ba756",
+    "bytes": 544513,
+    "article_count": 0
+  },
+  {
+    "date": "2026-07-03",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/03/all",
+    "sha256": "4ff1aa19c4572b34368088fba046d8a40020ffa6094c595c84ce84b572e69cff",
+    "bytes": 558946,
+    "article_count": 4
+  },
+  {
+    "date": "2026-07-04",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/04/all",
+    "sha256": "a879a9df4ed65a1b0047a13a5d197d96c68fe73846a2e7d13c6944940adf8a57",
+    "bytes": 550134,
+    "article_count": 2
+  },
+  {
+    "date": "2026-07-05",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/05/all",
+    "sha256": "0b0607f224644ce386b2f62b0fca25d507a0ea8dd924634845f802b461f84720",
+    "bytes": 550048,
+    "article_count": 2
+  },
+  {
+    "date": "2026-07-06",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/06/all",
+    "sha256": "121d2325bef51da2bd62706b398210424f67dd885d84f6f6ccd63c30ecefebdf",
+    "bytes": 561824,
+    "article_count": 5
+  },
+  {
+    "date": "2026-07-07",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/07/all",
+    "sha256": "54494f1e01691122d70fd01de99d20a5521de56d1d235fabb708fc56a0fff219",
+    "bytes": 554716,
+    "article_count": 3
+  },
+  {
+    "date": "2026-07-08",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/08/all",
+    "sha256": "5eb05865802dc314284490130f3f5052884730b2884fc46f52941ff3a2d0a27d",
+    "bytes": 570575,
+    "article_count": 8
+  },
+  {
+    "date": "2026-07-09",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/09/all",
+    "sha256": "66f7b4f2ed5eeca36a8f8f5d68b959585c3236d93ac091c6a694afb45bc86317",
+    "bytes": 569483,
+    "article_count": 6
+  },
+  {
+    "date": "2026-07-10",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/10/all",
+    "sha256": "818bf2ee5e068cd8c5740b4493ba30d82b857efc9bd76322f6204a7b7502cacc",
+    "bytes": 556080,
+    "article_count": 3
+  },
+  {
+    "date": "2026-07-11",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/11/all",
+    "sha256": "a3fc0320ed0f10fea965a6768dbc21686665bbbfa00078047b00499fe0c8d3b7",
+    "bytes": 550294,
+    "article_count": 1
+  },
+  {
+    "date": "2026-07-12",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/12/all",
+    "sha256": "d5d08c64e1d64151d93447037e81d44f1437c67c740747a11850cb48f328ab2c",
+    "bytes": 555020,
+    "article_count": 3
+  },
+  {
+    "date": "2026-07-13",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/13/all",
+    "sha256": "eb854b1a074327aa889b16f72b1ec1e5280b88ed541b17d66d6a1535122cae7d",
+    "bytes": 568272,
+    "article_count": 8
+  },
+  {
+    "date": "2026-07-14",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/14/all",
+    "sha256": "e57ad1ed742a0bf1006ec42b7cb42245eb4c4262d53f6e32d50371c0746ac672",
+    "bytes": 563315,
+    "article_count": 4
+  },
+  {
+    "date": "2026-07-15",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/15/all",
+    "sha256": "f2d70aae1ad14993d2742b4adf75df0e9aaea1bdaf51e01fcfdc9c533abefc00",
+    "bytes": 554811,
+    "article_count": 2
+  },
+  {
+    "date": "2026-07-16",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/16/all",
+    "sha256": "0b7ad80edba957a616f9f0ff6bfdb0e28ae14454b13cec73af7acdb42e3f0c3b",
+    "bytes": 565205,
+    "article_count": 5
+  },
+  {
+    "date": "2026-07-17",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/17/all",
+    "sha256": "2173837f7cad5e0183a190daa17d53b53796ee34a8291caaba81f295fea3abbd",
+    "bytes": 554634,
+    "article_count": 3
+  },
+  {
+    "date": "2026-07-18",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/18/all",
+    "sha256": "45eada82c56ae329b14e5864df4839044665662c45b60f2cfa3ad0227ebde3b4",
+    "bytes": 555198,
+    "article_count": 2
+  },
+  {
+    "date": "2026-07-19",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/19/all",
+    "sha256": "427a6d57eb83f1c16d314243b7e4354f48e57090af1dd68c286e31f600f67587",
+    "bytes": 558845,
+    "article_count": 3
+  },
+  {
+    "date": "2026-07-20",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/20/all",
+    "sha256": "944997f667599512c9b4a2d1da15e77adf3e57e2067f2dfe562875a7f6630133",
+    "bytes": 554433,
+    "article_count": 3
+  },
+  {
+    "date": "2026-07-21",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/21/all",
+    "sha256": "3b4dd1ac8d1d96df29377935f7bc96920771dbd85fb086d294971fae3f48e788",
+    "bytes": 570916,
+    "article_count": 7
+  },
+  {
+    "date": "2026-07-22",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/22/all",
+    "sha256": "d16350e0776a0712c758f44bbb171918c4500b28b336bf3927c3519875bf8db0",
+    "bytes": 568571,
+    "article_count": 7
+  },
+  {
+    "date": "2026-07-23",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/23/all",
+    "sha256": "86e73706efb6ab8e0b5b74e44b7fd748dc6b97ac685f2437835023ad2e862434",
+    "bytes": 563981,
+    "article_count": 6
+  },
+  {
+    "date": "2026-07-24",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/24/all",
+    "sha256": "dcc7b3de6c6b61163db40e1b546cc9b3f6223722e20a61bd61c3ccc0620c024f",
+    "bytes": 572719,
+    "article_count": 7
+  },
+  {
+    "date": "2026-07-25",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/25/all",
+    "sha256": "1440fccf56705ad751564dccbf3b7b0c8750ee5134441930bb3b58c5ad44be60",
+    "bytes": 554854,
+    "article_count": 2
+  },
+  {
+    "date": "2026-07-26",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/26/all",
+    "sha256": "7e633b790b15f4aa1fddefed1cd5e508e67f1687ebfe8a62c62f6d5f82a8f6bc",
+    "bytes": 550687,
+    "article_count": 2
+  },
+  {
+    "date": "2026-07-27",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/27/all",
+    "sha256": "5166245f7bff29e3df69048bbd052cb57c6c5c208e9212191cc6eb6410245f3d",
+    "bytes": 559164,
+    "article_count": 3
+  },
+  {
+    "date": "2026-07-28",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/28/all",
+    "sha256": "edef5213a3b0238adfd30da7de2614f23bfd291c46e37df64d2e77872733af3d",
+    "bytes": 554585,
+    "article_count": 1
+  },
+  {
+    "date": "2026-07-29",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/29/all",
+    "sha256": "01977663b82f983ca1b449ea54e812446ef57930c32ed342f10d955781e783fb",
+    "bytes": 555180,
+    "article_count": 3
+  },
+  {
+    "date": "2026-07-30",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/30/all",
+    "sha256": "fe7b5df793c17bf74b5fec88abe51cbfb55b03d4841d379f0a17ed393a66702a",
+    "bytes": 564345,
+    "article_count": 6
+  },
+  {
+    "date": "2026-07-31",
+    "url": "https://www.theguardian.com/world/iran/2026/jul/31/all",
+    "sha256": "194821c4bdee6702ce5fb99e8eda05d7832251489c776286572afbc2a4cb699b",
+    "bytes": 559067,
+    "article_count": 3
+  },
+  {
+    "date": "2026-08-01",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/01/all",
+    "sha256": "bf1d6b27a17ea08f08f72a44b3a67d3359be7e14701d237c662c03ba04c4872f",
+    "bytes": 550614,
+    "article_count": 2
+  },
+  {
+    "date": "2026-08-02",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/02/all",
+    "sha256": "43c01a3c1ab38a1df0686154e97c7c0254ae479be9dedb9ebc586177d8273ea2",
+    "bytes": 550802,
+    "article_count": 2
+  },
+  {
+    "date": "2026-08-03",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/03/all",
+    "sha256": "2fc91a6c94dab0e1be574dacd58adf09b99139a242abe9f4f26b14b03f316b13",
+    "bytes": 561622,
+    "article_count": 5
+  },
+  {
+    "date": "2026-08-04",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/04/all",
+    "sha256": "73eb9ef8a4e1d50b86d6bb2814ffec34d8ede0b800cc5883fbd48d38e0ebb9f3",
+    "bytes": 561420,
+    "article_count": 4
+  },
+  {
+    "date": "2026-08-05",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/05/all",
+    "sha256": "7313d85c4e4a6bc9a6f620a2b82eb607eca2c191d26c829fc48a20260746d01e",
+    "bytes": 555131,
+    "article_count": 3
+  },
+  {
+    "date": "2026-08-06",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/06/all",
+    "sha256": "b8c761f282eeef7fbdc9539b0ad776febb3736290841cdc9180eb24ee44973f7",
+    "bytes": 550238,
+    "article_count": 2
+  },
+  {
+    "date": "2026-08-07",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/07/all",
+    "sha256": "8a82647564f3cead880ca73f90dd6539c68763271120df3c601f253a2e762f0a",
+    "bytes": 550104,
+    "article_count": 2
+  },
+  {
+    "date": "2026-08-08",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/08/all",
+    "sha256": "4ab9713e74a28db4c25b9e005b32aef0911ad06850e55d947965560752a8efe1",
+    "bytes": 559288,
+    "article_count": 4
+  },
+  {
+    "date": "2026-08-09",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/09/all",
+    "sha256": "92d72348bb82bab901b06209175e87be86c2d6d3c8e0472514fa3585ac0787de",
+    "bytes": 550190,
+    "article_count": 2
+  },
+  {
+    "date": "2026-08-10",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/10/all",
+    "sha256": "44ded25fda0d51fcdef93af7b3b2922d8076b4dc5c5e0b8f0598aee2e6d16637",
+    "bytes": 543736,
+    "article_count": 1
+  },
+  {
+    "date": "2026-08-11",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/11/all",
+    "sha256": "6e85ba201606f60890144723aeb9f57a5d9ebbf16405bdec6de152f9d726795a",
+    "bytes": 544644,
+    "article_count": 0
+  },
+  {
+    "date": "2026-08-12",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/12/all",
+    "sha256": "d43ae27322d98883eac607fa0da8d70162d1a5876b17152e17e1f180875fef5b",
+    "bytes": 543297,
+    "article_count": 1
+  },
+  {
+    "date": "2026-08-13",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/13/all",
+    "sha256": "5f0837a9f5698f6b40302e85d152f0ee478c7d2d918e548719aba20e6e4748fb",
+    "bytes": 549307,
+    "article_count": 1
+  },
+  {
+    "date": "2026-08-14",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/14/all",
+    "sha256": "556a75de2d2123cb44f5c394728a5baa1a3b7f2dd6cf8a950b0a3f6de6aa9a84",
+    "bytes": 544347,
+    "article_count": 1
+  },
+  {
+    "date": "2026-08-15",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/15/all",
+    "sha256": "6b7a423e7fa5ab2185b39116d70d06a58af656f661f8ba703638fde26176fddc",
+    "bytes": 550000,
+    "article_count": 2
+  },
+  {
+    "date": "2026-08-16",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/16/all",
+    "sha256": "6b7a423e7fa5ab2185b39116d70d06a58af656f661f8ba703638fde26176fddc",
+    "bytes": 550000,
+    "article_count": 0
+  },
+  {
+    "date": "2026-08-17",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/17/all",
+    "sha256": "50bf58c797e91482b7418d7ff7f376e43c90d2e9e84f93667b6fe67127d23f20",
+    "bytes": 559504,
+    "article_count": 4
+  },
+  {
+    "date": "2026-08-18",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/18/all",
+    "sha256": "50bf58c797e91482b7418d7ff7f376e43c90d2e9e84f93667b6fe67127d23f20",
+    "bytes": 559504,
+    "article_count": 0
+  },
+  {
+    "date": "2026-08-19",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/19/all",
+    "sha256": "50bf58c797e91482b7418d7ff7f376e43c90d2e9e84f93667b6fe67127d23f20",
+    "bytes": 559504,
+    "article_count": 0
+  },
+  {
+    "date": "2026-08-20",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/20/all",
+    "sha256": "685de910176bf2bd0d109dd33d4f12142f02303211427085a9a74664076ac238",
+    "bytes": 550752,
+    "article_count": 2
+  },
+  {
+    "date": "2026-08-21",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/21/all",
+    "sha256": "b9dc59b0f9c5f8b2c7faba0117250e2765c6c4bb1e513dac01ccace4a329aa04",
+    "bytes": 544603,
+    "article_count": 0
+  },
+  {
+    "date": "2026-08-22",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/22/all",
+    "sha256": "a0713ff639a2e0ff734c43b5f2bb9d137c8831b75d8179e845ec90cf45fbd455",
+    "bytes": 550040,
+    "article_count": 1
+  },
+  {
+    "date": "2026-08-23",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/23/all",
+    "sha256": "8deece5a050f3f676f22efa5f43e34632ae0d3903491ece4fcaadc97c8bc768e",
+    "bytes": 550129,
+    "article_count": 2
+  },
+  {
+    "date": "2026-08-24",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/24/all",
+    "sha256": "8014813650539cc054f58af4a8a494dbc177c77c0db907967e954d21113e3d01",
+    "bytes": 550062,
+    "article_count": 2
+  },
+  {
+    "date": "2026-08-25",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/25/all",
+    "sha256": "acf7ebf53e28470813b29fa18ac9e9188bc5346753eaca6b62d0bfa1404ee80f",
+    "bytes": 564569,
+    "article_count": 6
+  },
+  {
+    "date": "2026-08-26",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/26/all",
+    "sha256": "cf7ad93f030d05efff9f53216b147d2982444acf7afe1ad03052c9ad8b4fca5f",
+    "bytes": 559280,
+    "article_count": 4
+  },
+  {
+    "date": "2026-08-27",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/27/all",
+    "sha256": "8a786f6a92a7647ee77f36b81688c26c9d7de0b69d78ac91f5562008b1351882",
+    "bytes": 544366,
+    "article_count": 1
+  },
+  {
+    "date": "2026-08-28",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/28/all",
+    "sha256": "8585c95986c40c9f85ad63e309a612ccf8d65cec8df89f975a90d67fba34461f",
+    "bytes": 550277,
+    "article_count": 1
+  },
+  {
+    "date": "2026-08-29",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/29/all",
+    "sha256": "a1f5e63ada10f36cf7bef7a36a1c2f33988bb8544550fed0f2d36f867020657f",
+    "bytes": 544324,
+    "article_count": 1
+  },
+  {
+    "date": "2026-08-30",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/30/all",
+    "sha256": "a1f5e63ada10f36cf7bef7a36a1c2f33988bb8544550fed0f2d36f867020657f",
+    "bytes": 544324,
+    "article_count": 0
+  },
+  {
+    "date": "2026-08-31",
+    "url": "https://www.theguardian.com/world/iran/2026/aug/31/all",
+    "sha256": "3818c2dc3d45eb1a7770baff86d3784c08b639d08329edd4b51e8e4cbfdd7b65",
+    "bytes": 558701,
+    "article_count": 3
+  },
+  {
+    "date": "2026-09-01",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/01/all",
+    "sha256": "8d746984e26040cebe6b13c820a13b40e1765f4bb5d3cfe867018c47c2ff64d0",
+    "bytes": 555014,
+    "article_count": 2
+  },
+  {
+    "date": "2026-09-02",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/02/all",
+    "sha256": "02aec8dc762cc904eb60ef124eb7ca254d10cb31199bb98f0226a469ad09e9d5",
+    "bytes": 567994,
+    "article_count": 6
+  },
+  {
+    "date": "2026-09-03",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/03/all",
+    "sha256": "7b1069082483940983391e9ed572a0c1a3165ff064a680590ca4821b39c32aaf",
+    "bytes": 565912,
+    "article_count": 5
+  },
+  {
+    "date": "2026-09-04",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/04/all",
+    "sha256": "1434b24167cf494cc2066109b19dba0377e1c257bc79679bc7fa1301420ba56b",
+    "bytes": 543343,
+    "article_count": 1
+  },
+  {
+    "date": "2026-09-05",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/05/all",
+    "sha256": "3e5181f1797aab1181d837df45c115d9c18ce4c2a111928b4e86ca15ad5e9ff0",
+    "bytes": 550031,
+    "article_count": 2
+  },
+  {
+    "date": "2026-09-06",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/06/all",
+    "sha256": "29a5ef78ff1442d7ea5b36cc05302e08a95308f9b960c6880ac4ec20081d943e",
+    "bytes": 554571,
+    "article_count": 3
+  },
+  {
+    "date": "2026-09-07",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/07/all",
+    "sha256": "cb73810a69b9afbe462c5dafb2c8b4d33f7dc55dc8fcd7429b0b4a758fe5a0aa",
+    "bytes": 554628,
+    "article_count": 0
+  },
+  {
+    "date": "2026-09-08",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/08/all",
+    "sha256": "9e5e0f4a0b9a629f83afb8e31d82f8c5a66a9c4e8839b7f137a7296ccc7b7eba",
+    "bytes": 549426,
+    "article_count": 2
+  },
+  {
+    "date": "2026-09-09",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/09/all",
+    "sha256": "6f3de3d3c320dc6016f593ec55d7fb92699f9c7e98d6db273f06d4ce0f7ab134",
+    "bytes": 554690,
+    "article_count": 2
+  },
+  {
+    "date": "2026-09-10",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/10/all",
+    "sha256": "fd3ef29d2c7f6aff10b4085b9d5b42cddbbc7a894eaeefb12590ff9d664ba850",
+    "bytes": 555533,
+    "article_count": 3
+  },
+  {
+    "date": "2026-09-11",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/11/all",
+    "sha256": "c4782db6e2f5cd82792ba9a639956db1dbd8d7046378ab121e6d2429109d2c07",
+    "bytes": 554572,
+    "article_count": 2
+  },
+  {
+    "date": "2026-09-12",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/12/all",
+    "sha256": "24a9ab3112f3e06c7c122a1b5a193839c6bdc6e4bdfefc818011876b1f363f07",
+    "bytes": 550063,
+    "article_count": 1
+  },
+  {
+    "date": "2026-09-13",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/13/all",
+    "sha256": "24a9ab3112f3e06c7c122a1b5a193839c6bdc6e4bdfefc818011876b1f363f07",
+    "bytes": 550063,
+    "article_count": 0
+  },
+  {
+    "date": "2026-09-14",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/14/all",
+    "sha256": "ea3771dda3df7a855f27f5f7d70a12d9f54b14360ec2a6cdf363e26884614936",
+    "bytes": 562016,
+    "article_count": 5
+  },
+  {
+    "date": "2026-09-15",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/15/all",
+    "sha256": "de27981124b9e73fa9dbba5797fbba72181a26a72428b3a71eebeb2c6e31ee9d",
+    "bytes": 559246,
+    "article_count": 4
+  },
+  {
+    "date": "2026-09-16",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/16/all",
+    "sha256": "f5fe67786ed4cb38767df6496d03b27f9c1b6e4eb87aa560d6b21c1e653d675e",
+    "bytes": 561490,
+    "article_count": 5
+  },
+  {
+    "date": "2026-09-17",
+    "url": "https://www.theguardian.com/world/iran/2026/sep/17/all",
+    "sha256": "b9b23d94b8040364e46d854f5ac7a30ded00f75030c181f4ade634f8e6f7b015",
+    "bytes": 544374,
+    "article_count": 1
+  }
+]

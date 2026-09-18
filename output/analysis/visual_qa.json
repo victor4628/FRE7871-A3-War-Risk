@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "render_tool": "Poppler pdftoppm",
+  "resolution_dpi": 110,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "findings": "All final pages inspected; no clipping, overlap, broken tables, or missing glyphs. Table ampersands corrected before final render."
+}

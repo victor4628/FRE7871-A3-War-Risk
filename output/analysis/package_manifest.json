@@ -1,0 +1,287 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 9474,
+    "sha256": "69e05eccd76d32abece0c2317a5834a65aceafad33118d7428a2962a30ad1037"
+  },
+  {
+    "path": "requirements.txt",
+    "bytes": 112,
+    "sha256": "7e184787f38164f6949f2c1d9414c6a76b9f434ca955aabd807832ba92988ef0"
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 43,
+    "sha256": "e55f362e8c62701bb3899c7e06e18c617a980b04a672034ae68850d230e2cd67"
+  },
+  {
+    "path": "scripts/analyze.py",
+    "bytes": 17300,
+    "sha256": "9131f1db4df8f987882e274aae5ec1952e2f174e42ab1c892b3272a95abf2402"
+  },
+  {
+    "path": "scripts/build_report.py",
+    "bytes": 35841,
+    "sha256": "22d4896a34a0757f5d1320e44df8f22cc311de8f804549cddeb8a43e040af74c"
+  },
+  {
+    "path": "scripts/download_data.py",
+    "bytes": 2009,
+    "sha256": "97335ab3f184a8de0483f782d61533f7a77cfd43daa9c92f4b1cbe1824aeb9b8"
+  },
+  {
+    "path": "scripts/download_etfs.py",
+    "bytes": 1042,
+    "sha256": "93ab85d7a3839be0470558f55f39bf20130781893d1009394dc9ec5a3cc9dd81"
+  },
+  {
+    "path": "scripts/download_news.py",
+    "bytes": 3193,
+    "sha256": "3ab4c59d8d2c9f6e2d4fd1f17e64550744b538b56a367583210d0b0d2335ff61"
+  },
+  {
+    "path": "scripts/validate.py",
+    "bytes": 2529,
+    "sha256": "da9482f05e49d9c77c5c2ec26c715bcba1c93fd2a11349030479444e94e1b156"
+  },
+  {
+    "path": "data/raw/ACWI.json",
+    "bytes": 23086,
+    "sha256": "c2f66425a9f553f30f870b882a0cbb400bad653a3ca8e3d027113a25fbf85c14"
+  },
+  {
+    "path": "data/raw/ai_gpr_country_eventtype_monthly.csv",
+    "bytes": 5964665,
+    "sha256": "c197dea8ce7e6703460864dc97d1971a51460faf3c8b909d19582e66bafb7044"
+  },
+  {
+    "path": "data/raw/ai_gpr_country_monthly.csv",
+    "bytes": 3443306,
+    "sha256": "8ecfc02448639c28a6d81824534e5b2494eb678661502c38b83b0b1ae02d0804"
+  },
+  {
+    "path": "data/raw/ai_gpr_data_daily.csv",
+    "bytes": 2289326,
+    "sha256": "b7ec996f33ec336a4d81fb22794538f46f825c95df8265802f3109398157548f"
+  },
+  {
+    "path": "data/raw/AI_GPR_PAPER.pdf",
+    "bytes": 2207486,
+    "sha256": "f6bc90e147e9ae0a0efd49f0ea0709e552a327e06092cbd25f17ea41ac0db558"
+  },
+  {
+    "path": "data/raw/BAMLC0A4CBBB.csv",
+    "bytes": 3414,
+    "sha256": "fd60b43056a482de4c2034fb8ca87322bb78232422cb06f8764ed90a1444a5e0"
+  },
+  {
+    "path": "data/raw/BAMLH0A0HYM2.csv",
+    "bytes": 3414,
+    "sha256": "f2b91768ffdc8a61b6a9eb61926f75d32396ae4ececb89057a05fb9ad4c7702b"
+  },
+  {
+    "path": "data/raw/DCOILBRENTEU.csv",
+    "bytes": 3570,
+    "sha256": "b6dc4aaa8290bf0ce1c1e48895e7bd4e301f6655aab537e2edb73c177224b7f1"
+  },
+  {
+    "path": "data/raw/DCOILWTICO.csv",
+    "bytes": 3530,
+    "sha256": "f1b2dab833bb8fe96136dbfdb3439cecd54342cf23397d1ee66ad062cc12fa74"
+  },
+  {
+    "path": "data/raw/DEXJPUS.csv",
+    "bytes": 3667,
+    "sha256": "558d67a99343cc491375b8ed30cb138b7565e4fffa9ffdf3ac185008c583739c"
+  },
+  {
+    "path": "data/raw/DEXUSEU.csv",
+    "bytes": 3667,
+    "sha256": "10717a12bcb66b15610b12211c527ab590eaa347e64522709d10438713709b2f"
+  },
+  {
+    "path": "data/raw/DGS10.csv",
+    "bytes": 3335,
+    "sha256": "046284b6edd9cc73d0baeb63223eb5e45d5e503a445fe513995b13fb6c87dc90"
+  },
+  {
+    "path": "data/raw/DGS2.csv",
+    "bytes": 3334,
+    "sha256": "f44e8f850497d4babda69c6c506ade9a1a01d347d0646b7327ae7b8f4a26b48f"
+  },
+  {
+    "path": "data/raw/DTWEXBGS.csv",
+    "bytes": 4062,
+    "sha256": "66c6db5eb21ee273f29d5b4413dbb5d5a65d5b5cd1e54a9348a14f5edacd04e3"
+  },
+  {
+    "path": "data/raw/EEM.json",
+    "bytes": 22700,
+    "sha256": "bb226477a00add11a60baf10666de79d5788f3c5511d9d4e2f462d8adb940440"
+  },
+  {
+    "path": "data/raw/etf_manifest.json",
+    "bytes": 693,
+    "sha256": "f19c326bc05eb5ef9362dd075610984a754cc814e959f883e6377f65413f1c67"
+  },
+  {
+    "path": "data/raw/FEZ.json",
+    "bytes": 22525,
+    "sha256": "081a4db0ac5e4f327acbd35dedea8ae7c29645049e97bc06ac8d46c85e3b4fb7"
+  },
+  {
+    "path": "data/raw/GLD.json",
+    "bytes": 22539,
+    "sha256": "05ee89d06975795eb1bea4a1baa63d527c435cf9287a8da10216242e1cc4a11c"
+  },
+  {
+    "path": "data/raw/guardian_articles.json",
+    "bytes": 684956,
+    "sha256": "72c9cb6b31d0ae373e6a10d9eef67b3675db40cc5e18a827f578f0fabe7c1f72"
+  },
+  {
+    "path": "data/raw/guardian_manifest.json",
+    "bytes": 61669,
+    "sha256": "0e4c3f0ac6835628f5bc7f3064cbc721caf78349a2e539418207c8d56c34be82"
+  },
+  {
+    "path": "data/raw/manifest.json",
+    "bytes": 5000,
+    "sha256": "3b25aa4febd82e76ca3f5f2a8c30e1ed99f7e7501dbb8e26d82b7e7202e00778"
+  },
+  {
+    "path": "data/raw/NIKKEI225.csv",
+    "bytes": 4103,
+    "sha256": "706f00f6cd10e19c0931c179208cfa3d091f3488c017bb81bb46fcf2ce8902c3"
+  },
+  {
+    "path": "data/raw/SP500.csv",
+    "bytes": 3931,
+    "sha256": "f27d89ceaaa11fa22ca6cc04b7179da0c705bc0d806bfb0ea019106d343993c0"
+  },
+  {
+    "path": "data/raw/T10YIE.csv",
+    "bytes": 3336,
+    "sha256": "6babb990fabc1ce856025661227ea8b5c7a1f30167d792bc0e9bdb6238af8b63"
+  },
+  {
+    "path": "data/raw/VIXCLS.csv",
+    "bytes": 3562,
+    "sha256": "6c67e1c12a94df501ae962d00a51f6c98f7804a77bbbe39b9d21b5d5d0745391"
+  },
+  {
+    "path": "output/analysis/corpus_monthly.csv",
+    "bytes": 175,
+    "sha256": "9d638f098e596d09851179dec5323c2c9ddbaa7f4d21af32424a3cc90672361d"
+  },
+  {
+    "path": "output/analysis/event_control_pairs.csv",
+    "bytes": 1054,
+    "sha256": "c73fbbd59c7e426505d40281a73b5539706103deebc9d11d456a2dd7e0a74bad"
+  },
+  {
+    "path": "output/analysis/event_sources.csv",
+    "bytes": 3881,
+    "sha256": "d51853faefa0200e7a9fd7ef1b9551c056b0aa6e87f4e89689993f47f8648469"
+  },
+  {
+    "path": "output/analysis/headline_scores.csv",
+    "bytes": 540550,
+    "sha256": "4a4c0a20ccb2531ecbf7dddfa2f4c68dcf6fe7d6bccb506aca12ba1580fa526a"
+  },
+  {
+    "path": "output/analysis/market_changes.csv",
+    "bytes": 57762,
+    "sha256": "cf253878c2777ce5d1953b3f02018be450120d6ea4aa2d784792f8011be61c3f"
+  },
+  {
+    "path": "output/analysis/market_coverage.csv",
+    "bytes": 562,
+    "sha256": "948719e361405216ac8e743499764a15a576542eb7dde8da98ac49afde5444ec"
+  },
+  {
+    "path": "output/analysis/market_levels.csv",
+    "bytes": 33016,
+    "sha256": "19bb675dceddffc5a9513ac53a8cf0d65c51099bd52ce1a8a3a7ba0087e5317e"
+  },
+  {
+    "path": "output/analysis/news_associations.csv",
+    "bytes": 9789,
+    "sha256": "c2e49cc53bde98852a0cfc93415dfaf6a6e4016be84a202eff06190dcac1ba05"
+  },
+  {
+    "path": "output/analysis/news_daily.csv",
+    "bytes": 18512,
+    "sha256": "6504b2880c164f8deeebe073b7f1577ea59932e85920eecdf79612e1f069ab0e"
+  },
+  {
+    "path": "output/analysis/rank_diagnostic.json",
+    "bytes": 600,
+    "sha256": "2512cda69dbeb9098d4d622667fabc6b34c063b38c2c8f470deed1f01e73b594"
+  },
+  {
+    "path": "output/analysis/reference_manifest.json",
+    "bytes": 327,
+    "sha256": "68d1c3595ae6fbe5d154b1a5ac187b47bb8bce16d5ead428e83ee6f45fb7f6fe"
+  },
+  {
+    "path": "output/analysis/report_structure.json",
+    "bytes": 987,
+    "sha256": "e03f9bcf62a567fd97fc64bad61c5a6e781c3f9011b17afddd54c69996010f7e"
+  },
+  {
+    "path": "output/analysis/robustness.csv",
+    "bytes": 30878,
+    "sha256": "1cdb3e80a87eabb5a5dbbd88e5b064de6c1eca671d3824345ac08aba762f43c5"
+  },
+  {
+    "path": "output/analysis/summary.json",
+    "bytes": 2750,
+    "sha256": "593b3a49d876e637b4885a80fc11eff419715b0579fb1ba5c3a6d2d3295df009"
+  },
+  {
+    "path": "output/analysis/table2_sensitivities.csv",
+    "bytes": 6414,
+    "sha256": "d19bfada8c303af3e693703637fe53d588a2312f9a82c71c59c51d6391a212bf"
+  },
+  {
+    "path": "output/analysis/table3_variance.csv",
+    "bytes": 2076,
+    "sha256": "a7bfa869ce9f7a284ec94d0ed6ec87272cb4ffa5e7bb3916cb4f30d309fd1a7b"
+  },
+  {
+    "path": "output/analysis/validation.json",
+    "bytes": 463,
+    "sha256": "2e403f2031c6f8170da14dab9ec7baf319f8e67aaed041a2670ecc8a496f479d"
+  },
+  {
+    "path": "output/analysis/visual_qa.json",
+    "bytes": 394,
+    "sha256": "9fb738a86f0039acafee384f4dc10900eb4fb4cd6d03eece12bfb5406e9f3fd7"
+  },
+  {
+    "path": "output/figures/identification_checks.png",
+    "bytes": 66911,
+    "sha256": "c5acd7db98cc72a19456ac065fe79270b14b8ebbd51f820073b5e0ae3527467c"
+  },
+  {
+    "path": "output/figures/news_and_benchmark.png",
+    "bytes": 79455,
+    "sha256": "c9bb57628955eecb3eb3b21cb338c18d7b7db6e315d31edcf8693f0033a99e15"
+  },
+  {
+    "path": "output/figures/news_sensitivity_intervals.png",
+    "bytes": 52661,
+    "sha256": "039eb1912a0a6430466c2f00aa1eebebf005651446e4e1fbbbce4ece2b2503a4"
+  },
+  {
+    "path": "output/iran_war_risk_2026.md",
+    "bytes": 31377,
+    "sha256": "9973f8da86e89846d617d856267cbfbf3a3629dbdc85c7fdd90a525cc8569a80"
+  },
+  {
+    "path": "output/pdf/iran_war_risk_2026.pdf",
+    "bytes": 271640,
+    "sha256": "04e6fabf914c2e04f6fee4b882dcc06f36f1da357fb3f1ce66e7733196d0430d"
+  }
+]

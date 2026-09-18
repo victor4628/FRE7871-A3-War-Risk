@@ -1,0 +1,18 @@
+series,variable,unit,observed_changes
+DGS2,US 2-year yield,bp,178
+DGS10,US 10-year yield,bp,178
+T10YIE,US 10-year breakeven,bp,178
+SP500,S&P 500,%,178
+BAMLC0A4CBBB,US BBB OAS,bp,178
+BAMLH0A0HYM2,US high-yield OAS,bp,178
+DCOILBRENTEU,Brent spot,USD/bbl,170
+DCOILWTICO,WTI spot,USD/bbl,176
+DTWEXBGS,Broad US dollar,%,174
+VIXCLS,VIX,points,178
+DEXUSEU,EUR/USD,%,174
+DEXJPUS,USD/JPY,%,174
+NIKKEI225,Nikkei 225 local close,%,158
+GLD,Gold ETF GLD,%,178
+ACWI,Global equity ETF ACWI,%,178
+FEZ,Euro-area equity ETF FEZ,%,178
+EEM,EM equity ETF EEM,%,178
