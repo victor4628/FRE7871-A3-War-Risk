@@ -1,13 +1,15 @@
 
 ## Iran war risk and financial sensitivities in 2026
 
-Empirical replication and NLP extensionJanuary 2 to September 17, 2026 | Prepared September 18, 2026
+Direct Rigobon-Sack replication with Iran replacing Iraq, plus an NLP extensionJanuary 2 to September 17, 2026 | Prepared September 18, 2026
+
+The core exercise keeps the original paper's event/control heteroskedasticity design, US-market outcome scope, two-year Treasury normalization, two single-instrument estimators, and combined-IV estimator. Iran-war news in 2026 replaces Iraq-war news; documented public-data proxies replace unavailable original instruments.
 
 Main finding: the requested estimators can be implemented with public 2026 data, but this specification does not identify precise causal Iran war-risk sensitivities. The US two-year Treasury anchor is weak, normalized estimates change markedly across instruments and event definitions, and the separate signed-news associations do not survive multiple-comparison correction.
 
 | Coverage | Final study |
 | --- | --- |
-| Financial variables | 17 including the Treasury anchor |
+| Financial variables | 9 including the Treasury anchor; original-paper scope |
 | Observed US sessions | 178 |
 | News archive coverage | 260 calendar days, no failed dates |
 | Collected / eligible / war-relevant headlines | 1,601 / 1,029 / 515 |
@@ -20,9 +22,9 @@ Main finding: the requested estimators can be implemented with public 2026 data,
 | US 2-year yield | 120.00 bp | 2026-09-17 |
 | US 10-year yield | 76.00 bp | 2026-09-17 |
 | S&P 500 | 11.57 % | 2026-09-17 |
-| Brent spot | 69.45 USD/bbl | 2026-09-15 |
+| Brent spot (oil proxy) | 69.45 USD/bbl | 2026-09-15 |
 | US high-yield OAS | -11.00 bp | 2026-09-17 |
-| Gold ETF GLD | 0.52 % | 2026-09-17 |
+| Gold ETF GLD (gold proxy) | 0.52 % | 2026-09-17 |
 
 These are observed year-to-date changes, not effects attributable to the war. In particular, yields rose over the year while oil became more expensive; the 2003 assumption that an increase in war risk should be oriented toward a Treasury-yield fall cannot be imported automatically.
 
@@ -62,21 +64,13 @@ Public daily observations are frozen at the retrieved September 18 vintage. The 
 | S&P 500 | SP500 | % | 178 |
 | US BBB OAS | BAMLC0A4CBBB | bp | 178 |
 | US high-yield OAS | BAMLH0A0HYM2 | bp | 178 |
-| Brent spot | DCOILBRENTEU | USD/bbl | 170 |
-| WTI spot | DCOILWTICO | USD/bbl | 176 |
+| Brent spot (oil proxy) | DCOILBRENTEU | USD/bbl | 170 |
+| Gold ETF GLD (gold proxy) | GLD | % | 178 |
 | Broad US dollar | DTWEXBGS | % | 174 |
-| VIX | VIXCLS | points | 178 |
-| EUR/USD | DEXUSEU | % | 174 |
-| USD/JPY | DEXJPUS | % | 174 |
-| Nikkei 225 local close | NIKKEI225 | % | 158 |
-| Gold ETF GLD | GLD | % | 178 |
-| Global equity ETF ACWI | ACWI | % | 178 |
-| Euro-area equity ETF FEZ | FEZ | % | 178 |
-| EM equity ETF EEM | EEM | % | 178 |
 
-Yields and spreads use first differences multiplied by 100 to convert percentage points to basis points. Equity, ETF, and FX changes use 100 times log differences. Oil uses dollar changes per barrel; VIX uses index-point differences. FX conventions are EUR/USD and USD/JPY as named.
+Yields and spreads use first differences multiplied by 100 to convert percentage points to basis points. S&amp;P 500, GLD, and the broad dollar use 100 times log differences. Oil uses dollar changes per barrel.
 
-The original off-the-run par yields are replaced by constant-maturity Treasury yields, credit spreads by ICE option-adjusted spreads, and 12-month oil futures by Brent/WTI spot prices. GLD adjusted returns replace a dollar bullion-price response. A comparable public on-the-run liquidity-premium series was not obtained and is omitted. ACWI, FEZ, and EEM are US-listed USD ETF proxies; Nikkei is a local close with different timing.
+The main table now follows the original paper's US-market scope. Constant-maturity Treasury yields replace estimated off-the-run par yields, ICE option-adjusted spreads replace the original credit spreads, Brent spot replaces 12-month oil futures, and GLD adjusted returns replace a dollar bullion-price change. A comparable public on-the-run Treasury liquidity-premium series was not obtained and is explicitly omitted. European, Japanese, global-equity, emerging-market, VIX, bilateral-FX, and duplicate WTI extensions are excluded from the replication tables.
 
 
 ## News NLP and independent benchmark
@@ -169,26 +163,18 @@ The source companion lists the representative article URL, original publication 
 
 Scenario: a latent-factor movement associated with a 25 bp decline in the US two-year yield. These estimates are supplied to replicate the original calculations; weak identification prevents treating them as calibrated increases in Iran war risk. An apparently precise combined-IV standard error does not resolve weak identification.
 
-| Outcome | Unit | Pairs | IV1 | IV2 | Both IVs |
+| Outcome | Unit | Pairs | IV1 est. (SE) | IV2 est. (SE) | Both IVs est. (SE) |
 | --- | --- | --- | --- | --- | --- |
-| US 10-year yield | bp | 18 | -27.30 | -22.59 | -21.57 |
-| US 10-year breakeven | bp | 18 | -8.22 | -14.00 | -9.54 |
-| S&P 500 | % | 18 | 2.00 | 10.01 | 1.85 |
-| US BBB OAS | bp | 18 | 6.36 | -0.86 | 2.24 |
-| US high-yield OAS | bp | 18 | 9.65 | 67.05 | 19.06 |
-| Brent spot | USD/bbl | 17 | -19.59 | -53.02 | -25.33 |
-| WTI spot | USD/bbl | 18 | -16.76 | -47.71 | -21.93 |
-| Broad US dollar | % | 18 | -1.32 | -2.00 | -1.46 |
-| VIX | points | 18 | -3.90 | -27.07 | -3.48 |
-| EUR/USD | % | 18 | 2.26 | 1.95 | 2.11 |
-| USD/JPY | % | 18 | -2.62 | -5.03 | -3.56 |
-| Nikkei 225 local close | % | 14 | 1.95 | 16.80 | 2.04 |
-| Gold ETF GLD | % | 18 | 0.28 | -9.82 | 0.40 |
-| Global equity ETF ACWI | % | 18 | 3.98 | 10.17 | 5.30 |
-| Euro-area equity ETF FEZ | % | 18 | 10.59 | 11.54 | 11.45 |
-| EM equity ETF EEM | % | 18 | 11.05 | 16.81 | 14.60 |
+| US 10-year yield | bp | 18 | -27.30* (14.41) | -22.59*** (6.09) | -21.57*** (5.96) |
+| US 10-year breakeven | bp | 18 | -8.22 (7.51) | -14.00 (10.19) | -9.54 (7.17) |
+| S&P 500 | % | 18 | 2.00 (2.03) | 10.01 (12.12) | 1.85 (2.02) |
+| US BBB OAS | bp | 18 | 6.36 (9.60) | -0.86 (6.20) | 2.24 (3.10) |
+| US high-yield OAS | bp | 18 | 9.65 (21.79) | 67.05 (164.30) | 19.06 (23.49) |
+| Brent spot (oil proxy) | USD/bbl | 17 | -19.59 (16.47) | -53.02 (58.17) | -25.33 (21.73) |
+| Gold ETF GLD (gold proxy) | % | 18 | 0.28 (5.69) | -9.82 (444.97) | 0.40 (4.51) |
+| Broad US dollar | % | 18 | -1.32 (1.09) | -2.00 (2.75) | -1.46 (1.19) |
 
-IV1 uses sign(H/L) times the Treasury change; IV2 uses sign(H/L) times the outcome change. The combined estimator uses both. All regressions here follow the paper's zero-mean, no-intercept second-moment formulation. Regime-centered covariance estimates appear in the machine-readable table.
+Heteroskedasticity-robust standard errors are in parentheses. Stars use two-sided normal-reference p values: * p &lt; 0.10, ** p &lt; 0.05, *** p &lt; 0.01. IV1 uses sign(H/L) times the Treasury change; IV2 uses sign(H/L) times the outcome change; the combined estimator uses both. The regressions follow the paper's zero-mean, no-intercept formulation. With a weak first stage, conventional SEs and stars can be misleading, so the next page also reports weak-IV-robust confidence sets.
 
 The S&amp;P conditional response is +1.85%, and the Brent response is -$25.33/bbl under the combined instruments. Their signs differ from the 2003 Iraq findings. Because the anchor is weak and the sign of a 2026 war shock is unverified, those signs are evidence against mechanically importing the original scenario, not evidence that war reliably benefits equities or lowers oil prices.
 
@@ -204,9 +190,9 @@ The anchor second-moment shift is 12.67 bp squared. Its 95% circular pair-block 
 | US 10-year yield | [-inf, -14.93] or [4.40, +inf] | bp |
 | US 10-year breakeven | [-inf, 0.90] or [6.31, +inf] | bp |
 | S&P 500 | [-inf, +inf] | % |
-| Brent spot | [-inf, +inf] | USD/bbl |
+| Brent spot (oil proxy) | [-inf, +inf] | USD/bbl |
 | Broad US dollar | [-inf, -0.16] or [1.74, +inf] | % |
-| Euro-area equity ETF FEZ | [-inf, -9.92] or [5.45, +inf] | % |
+| Gold ETF GLD (gold proxy) | [-inf, +inf] | % |
 
 Sets invert the IV1 difference-moment test using paired contributions with HAC covariance across the ordered pairs. They retain unbounded and disconnected regions. Thus a zero restriction can sometimes be rejected without identifying a finite magnitude or unique sign. Small-sample coverage is approximate. Percentile ratio intervals are also saved, but are not reliable replacements for unbounded sets.
 
@@ -224,8 +210,8 @@ The original combined-instrument results were scaled to a 25 bp fall in two-year
 | S&P 500 | -3.76 % | 1.85 % | Conditional only |
 | US BBB OAS | 5.00 bp | 2.24 bp | Conditional only |
 | US high-yield OAS | 34.00 bp | 19.06 bp | Conditional only |
-| Brent spot | 0.77 USD/bbl futures | -25.33 USD/bbl | Proxy differs |
-| Gold ETF GLD | 1.30 USD gold | 0.40 % | Proxy differs |
+| Brent spot (oil proxy) | 0.77 USD/bbl futures | -25.33 USD/bbl | Proxy differs |
+| Gold ETF GLD (gold proxy) | 1.30 USD gold | 0.40 % | Proxy differs |
 | Broad US dollar | -0.44 % | -1.46 % | Conditional only |
 
 ### The original mechanisms need not carry over
@@ -248,48 +234,32 @@ The paper's predicted shift for outcome j is d(j) squared times the anchor secon
 | S&P 500 | 0.423 | 0.829 | 0.070 | 8.4 | 1.0 |
 | US BBB OAS | 1.222 | 1.111 | 0.101 | 9.1 | 0.7 |
 | US high-yield OAS | 15.444 | 28.556 | 7.365 | 25.8 | 2.9 |
-| Brent spot | 20.824 | 38.324 | 10.807 | 28.2 | 5.5 |
-| WTI spot | 15.966 | 32.172 | 9.743 | 30.3 | 7.5 |
+| Brent spot (oil proxy) | 20.824 | 38.324 | 10.807 | 28.2 | 5.5 |
+| Gold ETF GLD (gold proxy) | 2.967 | 2.912 | 0.003 | 0.1 | 0.0 |
 | Broad US dollar | 0.105 | 0.158 | 0.043 | 27.4 | 5.7 |
-| VIX | 1.670 | 3.809 | 0.245 | 6.4 | 1.0 |
-| EUR/USD | 0.162 | 0.251 | 0.091 | 36.1 | 7.4 |
-| USD/JPY | 0.217 | 0.484 | 0.256 | 53.0 | 9.1 |
-| Nikkei 225 local close | 4.141 | 4.688 | 0.069 | 1.5 | 0.2 |
-| Gold ETF GLD | 2.967 | 2.912 | 0.003 | 0.1 | 0.0 |
-| Global equity ETF ACWI | 0.567 | 1.387 | 0.570 | 41.1 | 6.4 |
-| Euro-area equity ETF FEZ | 1.114 | 3.592 | 2.659 | 74.0 | 16.9 |
-| EM equity ETF EEM | 2.052 | 5.819 | 4.318 | 74.2 | 13.6 |
 
 Moments have each outcome's daily-change unit squared. Financial outcomes have different units and cannot be compared by raw variance size. Outcome-specific missing pairs account for different samples.
 
 No reported share is endorsed as an identified war-risk variance bound. Weak loadings can generate implausible shares, while some observed outcome variances actually decline on H days. A numerically admissible percentage alone does not establish a causal decomposition. The CSV preserves raw results and flags percentages outside [0,100] rather than clipping them.
 
 
-## Signed news sensitivities across global markets
+## Signed news sensitivities for replication variables
 
 This separate model regresses each daily financial change on standardized signed-news changes, attention changes, lagged financial changes, month effects, and scheduled macro-release indicators. HAC errors use five lags. One standard deviation of the news change is 40.14 news-index points; it is not a one-percentage-point change in war probability.
 
 | Outcome | Unit | Per news SD | 95% HAC interval | FDR q | N |
 | --- | --- | --- | --- | --- | --- |
-| US 2-year yield | bp | -0.476 | [-1.086, 0.135] | 0.527 | 177 |
-| US 10-year yield | bp | -0.333 | [-0.947, 0.281] | 0.699 | 177 |
-| US 10-year breakeven | bp | -0.151 | [-0.509, 0.207] | 0.834 | 177 |
-| S&P 500 | % | -0.014 | [-0.116, 0.087] | 0.873 | 177 |
-| US BBB OAS | bp | 0.022 | [-0.126, 0.169] | 0.873 | 177 |
-| US high-yield OAS | bp | 0.481 | [-0.059, 1.021] | 0.527 | 177 |
-| Brent spot | USD/bbl | 0.415 | [-0.157, 0.988] | 0.527 | 166 |
-| WTI spot | USD/bbl | 0.378 | [-0.079, 0.835] | 0.527 | 175 |
-| Broad US dollar | % | 0.015 | [-0.025, 0.054] | 0.834 | 173 |
-| VIX | points | 0.067 | [-0.123, 0.256] | 0.834 | 177 |
-| EUR/USD | % | -0.008 | [-0.056, 0.039] | 0.873 | 173 |
-| USD/JPY | % | 0.062 | [-0.023, 0.146] | 0.527 | 173 |
-| Nikkei 225 local close | % | 0.026 | [-0.286, 0.339] | 0.873 | 149 |
-| Gold ETF GLD | % | 0.125 | [-0.097, 0.348] | 0.699 | 177 |
-| Global equity ETF ACWI | % | -0.009 | [-0.124, 0.106] | 0.873 | 177 |
-| Euro-area equity ETF FEZ | % | -0.023 | [-0.175, 0.129] | 0.873 | 177 |
-| EM equity ETF EEM | % | -0.022 | [-0.245, 0.201] | 0.873 | 177 |
+| US 2-year yield | bp | -0.476 | [-1.086, 0.135] | 0.465 | 177 |
+| US 10-year yield | bp | -0.333 | [-0.947, 0.281] | 0.518 | 177 |
+| US 10-year breakeven | bp | -0.151 | [-0.509, 0.207] | 0.593 | 177 |
+| S&P 500 | % | -0.014 | [-0.116, 0.087] | 0.782 | 177 |
+| US BBB OAS | bp | 0.022 | [-0.126, 0.169] | 0.782 | 177 |
+| US high-yield OAS | bp | 0.481 | [-0.059, 1.021] | 0.465 | 177 |
+| Brent spot (oil proxy) | USD/bbl | 0.415 | [-0.157, 0.988] | 0.465 | 166 |
+| Gold ETF GLD (gold proxy) | % | 0.125 | [-0.097, 0.348] | 0.518 | 177 |
+| Broad US dollar | % | 0.015 | [-0.025, 0.054] | 0.593 | 173 |
 
-All contemporaneous intervals include zero. The smallest Benjamini-Hochberg adjusted q value is 0.527. None of the 17 outcomes reaches q &lt; 0.05. Point estimates suggest higher oil prices and wider high-yield spreads alongside lower Treasury yields, but the data do not establish those responses statistically.
+All contemporaneous intervals include zero. The smallest Benjamini-Hochberg adjusted q value is 0.465. None of the 9 replication variables reaches q &lt; 0.05. Point estimates suggest higher oil prices and wider high-yield spreads alongside lower Treasury yields, but the data do not establish those responses statistically.
 
 Dictionary measurement error, single-outlet selection, post-event reporting, missing timestamps, mixed peace and conflict news, and confounding macro shocks limit interpretation. These results are associations with measured news flow, not structural causal estimates.
 
@@ -306,9 +276,9 @@ Dictionary measurement error, single-outlet selection, post-event reporting, mis
 
 Each row uses the same -25 bp Treasury normalization. Cutoff changes redefine H and matching. Outcome samples can be smaller than the maximum pair count. The next-session rule shifts news features before selecting H/L. A prewar-only estimate is suppressed because it has fewer than eight matched pairs.
 
-The independent signed-news regressions also use next-session timing and a lead-news placebo. Their smallest corrected q values are 0.932 and 0.910, respectively. No robust predictive association emerges. A nonsignificant lead placebo cannot establish causality, particularly when the contemporaneous signal is itself weak.
+The independent signed-news regressions also use next-session timing and a lead-news placebo. Their smallest corrected q values are 0.743 and 0.549, respectively. No robust predictive association emerges. A nonsignificant lead placebo cannot establish causality, particularly when the contemporaneous signal is itself weak.
 
-FRED spot oil, Treasury, FX, and equity observations are not synchronized intraday. Nikkei closes earlier than US markets, while US-listed international ETFs incorporate later information. These timing differences are explicit limits on treating every row as a simultaneous global response.
+FRED spot oil, Treasury, broad-dollar, and equity observations are not synchronized intraday. This timing limitation remains even after restricting the main table to the original paper's US-market scope.
 
 
 ## What the evidence supports
@@ -338,7 +308,7 @@ Supplied referencesRigobon, Roberto (2003). Identification through Heteroskedast
 
 News and NLP benchmarkGuardian dated Iran-topic archive, January 1 to September 17, 2026. Guardian Iran archive.Iacoviello, Matteo and Jonathan Tong (2026). The AI-GPR Index: Measuring Geopolitical Risk using Artificial Intelligence. Published monthly Iran-country series and methodology. Author data and paper. This benchmark is descriptive and not an Iran-specific daily regressor.
 
-Financial dataFRED daily series DGS2, DGS10, T10YIE, SP500, BAMLC0A4CBBB, BAMLH0A0HYM2, DCOILBRENTEU, DCOILWTICO, DTWEXBGS, VIXCLS, DEXUSEU, DEXJPUS, NIKKEI225. Federal Reserve, EIA, S&amp;P, ICE BofA, CBOE, and Nikkei source series accessed via FRED.Yahoo Finance daily adjusted-close histories for GLD, ACWI, FEZ, and EEM, accessed via public chart responses. All observations downloaded September 18, 2026; market sample ends September 17, with earlier latest observations for lagged series.
+Financial dataFRED daily series DGS2, DGS10, T10YIE, SP500, BAMLC0A4CBBB, BAMLH0A0HYM2, DCOILBRENTEU, and DTWEXBGS. Federal Reserve, EIA, S&amp;P, and ICE BofA source series accessed via FRED.Yahoo Finance daily adjusted-close history for GLD. All observations were downloaded September 18, 2026; the market sample ends September 17, with an earlier latest observation for Brent.
 
 Macro calendarsFederal Reserve FOMC calendar; BLS CPI calendar; BLS employment calendar. Dates are preserved in summary.json and analyze.py.
 

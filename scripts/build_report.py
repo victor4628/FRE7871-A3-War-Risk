@@ -26,7 +26,7 @@ fig,ax=plt.subplots(1,2,figsize=(9.5,3.1));rr=r[r.series=='DGS10'].iloc[0]
 h=chg.loc[pairs.H,'DGS2'];l=chg.loc[pairs.L,'DGS2']
 ax[0].bar(['Control days','Event days'],[np.mean(l*l),np.mean(h*h)],color=['#b8c9c3',GREEN]);ax[0].set_ylabel('Mean squared yield change (bp squared)');ax[0].set_title('Treasury anchor has a weak shift')
 ax[1].bar(range(1,8),rank['standardized_eigenvalues'],color=[GREEN if a>=0 else '#b98563' for a in rank['standardized_eigenvalues']]);ax[1].axhline(0,color=GREY,lw=.7);ax[1].set_title('Covariance-shift eigenvalues');ax[1].set_xlabel('Eigenvalue sorted from smallest');ax[1].set_ylabel('Standardized second-moment shift');fig.tight_layout();fig.savefig(FIG/'identification_checks.png',dpi=190);plt.close(fig)
-fig,axes=plt.subplots(1,3,figsize=(9.5,3.0));groups=[(['DGS2','DGS10','BAMLH0A0HYM2'],'Basis points'),(['SP500','ACWI','FEZ','EEM','GLD'],'Percent log return'),(['DCOILBRENTEU','DCOILWTICO'],'USD per barrel')]
+fig,axes=plt.subplots(1,3,figsize=(9.5,3.0));groups=[(['DGS2','DGS10','BAMLC0A4CBBB','BAMLH0A0HYM2'],'Basis points'),(['SP500','GLD'],'Percent log return'),(['DCOILBRENTEU','DTWEXBGS'],'Native units')]
 for ax,(keys,label) in zip(axes,groups):
     d=ass[(ass.lag==0)&ass.series.isin(keys)].set_index('series').loc[keys];y=np.arange(len(d))
     ax.errorbar(d.effect_per_sd_signed_news_change,y,xerr=np.vstack([d.effect_per_sd_signed_news_change-d.ci_lo,d.ci_hi-d.effect_per_sd_signed_news_change]),fmt='o',color=GREEN,capsize=3);ax.axvline(0,color=GREY,lw=.8);ax.set_yticks(y,keys,fontsize=8);ax.invert_yaxis();ax.set_xlabel(label);ax.grid(axis='x')
@@ -54,15 +54,20 @@ def table(headers,rows,widths):
     md.append('| '+' | '.join(headers)+' |\n| '+' | '.join(['---']*len(headers))+' |\n'+'\n'.join('| '+' | '.join(mdcell(x) for x in row)+' |' for row in rows)+'\n')
 def figure(name):story.append(Image(str(FIG/name),width=512,height=512*plt.imread(FIG/name).shape[0]/plt.imread(FIG/name).shape[1]));story.append(Spacer(1,5))
 def num(x,n=2):return f'{float(x):,.{n}f}'
+def estse(z,prefix):
+    est=float(z[prefix+'_effect_minus25bp']);se=float(z[prefix+'_robust_se_effect']);p=float(z[prefix+'_robust_p'])
+    stars='***' if p<.01 else '**' if p<.05 else '*' if p<.10 else ''
+    return num(est)+stars+' ('+num(se)+')'
 def lookup(k):return r[r.series==k].iloc[0]
 def ytd(k):
     d=lev[k].dropna();base=d.loc[:'2025-12-31'].iloc[-1];last=d.iloc[-1]
     return base,last,str(d.index[-1].date())
 
 section('Iran war risk and financial sensitivities in 2026')
-para('<b>Empirical replication and NLP extension</b><br/>January 2 to September 17, 2026 | Prepared September 18, 2026')
+para('<b>Direct Rigobon-Sack replication with Iran replacing Iraq, plus an NLP extension</b><br/>January 2 to September 17, 2026 | Prepared September 18, 2026')
+para('The core exercise keeps the original paper\'s event/control heteroskedasticity design, US-market outcome scope, two-year Treasury normalization, two single-instrument estimators, and combined-IV estimator. Iran-war news in 2026 replaces Iraq-war news; documented public-data proxies replace unavailable original instruments.')
 para('<b>Main finding:</b> the requested estimators can be implemented with public 2026 data, but this specification does not identify precise causal Iran war-risk sensitivities. The US two-year Treasury anchor is weak, normalized estimates change markedly across instruments and event definitions, and the separate signed-news associations do not survive multiple-comparison correction.')
-table(['Coverage','Final study'],[['Financial variables','17 including the Treasury anchor'],['Observed US sessions','178'],['News archive coverage','260 calendar days, no failed dates'],['Collected / eligible / war-relevant headlines','1,601 / 1,029 / 515'],['Matched event / control days','18 / 18; fewer pairs for some outcomes']],[178,334])
+table(['Coverage','Final study'],[['Financial variables','9 including the Treasury anchor; original-paper scope'],['Observed US sessions','178'],['News archive coverage','260 calendar days, no failed dates'],['Collected / eligible / war-relevant headlines','1,601 / 1,029 / 515'],['Matched event / control days','18 / 18; fewer pairs for some outcomes']],[178,334])
 sub('Observed market changes are substantial')
 rows=[]
 for k in ['DGS2','DGS10','SP500','DCOILBRENTEU','BAMLH0A0HYM2','GLD']:
@@ -88,8 +93,8 @@ para('Public daily observations are frozen at the retrieved September 18 vintage
 rows=[]
 for _,z in cov.iterrows():rows.append([z.variable,z.series,z.unit,str(z.observed_changes)])
 table(['Variable','Identifier','Change unit','N'],rows,[235,137,90,50])
-para('Yields and spreads use first differences multiplied by 100 to convert percentage points to basis points. Equity, ETF, and FX changes use 100 times log differences. Oil uses dollar changes per barrel; VIX uses index-point differences. FX conventions are EUR/USD and USD/JPY as named.',small=True)
-para('The original off-the-run par yields are replaced by constant-maturity Treasury yields, credit spreads by ICE option-adjusted spreads, and 12-month oil futures by Brent/WTI spot prices. GLD adjusted returns replace a dollar bullion-price response. A comparable public on-the-run liquidity-premium series was not obtained and is omitted. ACWI, FEZ, and EEM are US-listed USD ETF proxies; Nikkei is a local close with different timing.',small=True)
+para('Yields and spreads use first differences multiplied by 100 to convert percentage points to basis points. S&amp;P 500, GLD, and the broad dollar use 100 times log differences. Oil uses dollar changes per barrel.',small=True)
+para('The main table now follows the original paper\'s US-market scope. Constant-maturity Treasury yields replace estimated off-the-run par yields, ICE option-adjusted spreads replace the original credit spreads, Brent spot replaces 12-month oil futures, and GLD adjusted returns replace a dollar bullion-price change. A comparable public on-the-run Treasury liquidity-premium series was not obtained and is explicitly omitted. European, Japanese, global-equity, emerging-market, VIX, bilateral-FX, and duplicate WTI extensions are excluded from the replication tables.',small=True)
 
 section('News NLP and independent benchmark')
 para('The corpus contains every dated article card retrieved from the Guardian Iran-tag archive between January 1 and September 17. URLs are deduplicated. Opinion, video, audio, gallery, and live-blog entries are excluded, as are headlines naming explicit financial-market outcomes. The primary classifier analyzes headlines; it does not claim full-story semantic or multilingual coverage.')
@@ -147,9 +152,9 @@ pd.DataFrame(event_rows).to_csv(A/'event_sources.csv',index=False)
 section('Conditional sensitivities replicating Table 2')
 para('<b>Scenario:</b> a latent-factor movement associated with a 25 bp decline in the US two-year yield. These estimates are supplied to replicate the original calculations; weak identification prevents treating them as calibrated increases in Iran war risk. An apparently precise combined-IV standard error does not resolve weak identification.')
 rows=[]
-for _,z in r.iterrows():rows.append([z.variable,z.unit,str(z.pairs),num(z.e1_effect_minus25bp),num(z.e2_effect_minus25bp),num(z.e3_effect_minus25bp)])
-table(['Outcome','Unit','Pairs','IV1','IV2','Both IVs'],rows,[211,65,42,64,64,66])
-para('IV1 uses sign(H/L) times the Treasury change; IV2 uses sign(H/L) times the outcome change. The combined estimator uses both. All regressions here follow the paper\'s zero-mean, no-intercept second-moment formulation. Regime-centered covariance estimates appear in the machine-readable table.',small=True)
+for _,z in r.iterrows():rows.append([z.variable,z.unit,str(z.pairs),estse(z,'e1'),estse(z,'e2'),estse(z,'e3')])
+table(['Outcome','Unit','Pairs','IV1 est. (SE)','IV2 est. (SE)','Both IVs est. (SE)'],rows,[166,48,35,88,88,87])
+para('Heteroskedasticity-robust standard errors are in parentheses. Stars use two-sided normal-reference p values: * p &lt; 0.10, ** p &lt; 0.05, *** p &lt; 0.01. IV1 uses sign(H/L) times the Treasury change; IV2 uses sign(H/L) times the outcome change; the combined estimator uses both. The regressions follow the paper\'s zero-mean, no-intercept formulation. With a weak first stage, conventional SEs and stars can be misleading, so the next page also reports weak-IV-robust confidence sets.',small=True)
 para('The S&amp;P conditional response is +1.85%, and the Brent response is -$25.33/bbl under the combined instruments. Their signs differ from the 2003 Iraq findings. Because the anchor is weak and the sign of a 2026 war shock is unverified, those signs are evidence against mechanically importing the original scenario, not evidence that war reliably benefits equities or lowers oil prices.',small=True)
 
 section('Uncertainty and identification diagnostics')
@@ -157,7 +162,7 @@ para('The anchor second-moment shift is '+num(rr.delta_anchor_second_moment)+' b
 figure('identification_checks.png')
 sub('Confidence sets preserve denominator uncertainty')
 rows=[]
-for k in ['DGS10','T10YIE','SP500','DCOILBRENTEU','DTWEXBGS','FEZ']:
+for k in ['DGS10','T10YIE','SP500','DCOILBRENTEU','DTWEXBGS','GLD']:
     z=lookup(k);rows.append([z.variable,z.AR_effect_confidence_set.replace(' U ',' or '),z.unit])
 table(['Outcome','95% paired moment confidence set','Unit'],rows,[178,259,75])
 para('Sets invert the IV1 difference-moment test using paired contributions with HAC covariance across the ordered pairs. They retain unbounded and disconnected regions. Thus a zero restriction can sometimes be rejected without identifying a finite magnitude or unique sign. Small-sample coverage is approximate. Percentile ratio intervals are also saved, but are not reliable replacements for unbounded sets.',small=True)
@@ -183,12 +188,12 @@ table(['Outcome','L moment','H moment','Predicted shift','H %','All %'],rows,[19
 para('Moments have each outcome\'s daily-change unit squared. Financial outcomes have different units and cannot be compared by raw variance size. Outcome-specific missing pairs account for different samples.',small=True)
 para('<b>No reported share is endorsed as an identified war-risk variance bound.</b> Weak loadings can generate implausible shares, while some observed outcome variances actually decline on H days. A numerically admissible percentage alone does not establish a causal decomposition. The CSV preserves raw results and flags percentages outside [0,100] rather than clipping them.',small=True)
 
-section('Signed news sensitivities across global markets')
+section('Signed news sensitivities for replication variables')
 para('This separate model regresses each daily financial change on standardized signed-news changes, attention changes, lagged financial changes, month effects, and scheduled macro-release indicators. HAC errors use five lags. One standard deviation of the news change is '+num(ass.risk_change_sd_index_points.iloc[0],2)+' news-index points; it is not a one-percentage-point change in war probability.')
 rows=[]
 for _,z in ass[ass.lag==0].iterrows():rows.append([z.variable,z.unit,num(z.effect_per_sd_signed_news_change,3),'['+num(z.ci_lo,3)+', '+num(z.ci_hi,3)+']',num(z.q_BH,3),str(z.N)])
 table(['Outcome','Unit','Per news SD','95% HAC interval','FDR q','N'],rows,[180,57,75,110,52,38])
-para('All contemporaneous intervals include zero. The smallest Benjamini-Hochberg adjusted q value is '+num(ass[ass.lag==0].q_BH.min(),3)+'. None of the 17 outcomes reaches q &lt; 0.05. Point estimates suggest higher oil prices and wider high-yield spreads alongside lower Treasury yields, but the data do not establish those responses statistically.',small=True)
+para('All contemporaneous intervals include zero. The smallest Benjamini-Hochberg adjusted q value is '+num(ass[ass.lag==0].q_BH.min(),3)+'. None of the 9 replication variables reaches q &lt; 0.05. Point estimates suggest higher oil prices and wider high-yield spreads alongside lower Treasury yields, but the data do not establish those responses statistically.',small=True)
 para('Dictionary measurement error, single-outlet selection, post-event reporting, missing timestamps, mixed peace and conflict news, and confounding macro shocks limit interpretation. These results are associations with measured news flow, not structural causal estimates.',small=True)
 
 section('Robustness and market timing')
@@ -200,7 +205,7 @@ table(['Specification','Max pairs','10-year bp','S&P %','Brent USD','Dollar %'],
 para('Each row uses the same -25 bp Treasury normalization. Cutoff changes redefine H and matching. Outcome samples can be smaller than the maximum pair count. The next-session rule shifts news features before selecting H/L. A prewar-only estimate is suppressed because it has fewer than eight matched pairs.',small=True)
 figure('news_sensitivity_intervals.png')
 para('The independent signed-news regressions also use next-session timing and a lead-news placebo. Their smallest corrected q values are '+num(ass[ass.lag==1].q_BH.min(),3)+' and '+num(ass[ass.lag==-1].q_BH.min(),3)+', respectively. No robust predictive association emerges. A nonsignificant lead placebo cannot establish causality, particularly when the contemporaneous signal is itself weak.',small=True)
-para('FRED spot oil, Treasury, FX, and equity observations are not synchronized intraday. Nikkei closes earlier than US markets, while US-listed international ETFs incorporate later information. These timing differences are explicit limits on treating every row as a simultaneous global response.',small=True)
+para('FRED spot oil, Treasury, broad-dollar, and equity observations are not synchronized intraday. This timing limitation remains even after restricting the main table to the original paper\'s US-market scope.',small=True)
 
 section('What the evidence supports')
 para('<b>The 2026 Iran conflict coincides with substantial news intensity and market changes, but the requested public-data application does not isolate a precise single war-risk factor.</b> The data support a completed replication exercise with inconclusive causal sensitivities, rather than a claim that war risk has no financial effects.')
@@ -216,7 +221,7 @@ para('The delivered cache, scripts, and tables provide the empirical baseline fo
 section('Sources and reproducibility')
 para('<b>Supplied references</b><br/>Rigobon, Roberto (2003). Identification through Heteroskedasticity. The Review of Economics and Statistics 85(4), 777-792. Supplied PDF, 16 pages.<br/>Rigobon, Roberto and Brian Sack (2003). The Effects of War Risk on U.S. Financial Markets. NBER Working Paper 9609, April. Supplied PDF, 16 pages. Methods on PDF pages 4-8; normalization and interpretation on pages 9-11; Tables 1-3 on pages 14-16.')
 para('<b>News and NLP benchmark</b><br/>Guardian dated Iran-topic archive, January 1 to September 17, 2026. <link href="https://www.theguardian.com/world/iran">Guardian Iran archive</link>.<br/>Iacoviello, Matteo and Jonathan Tong (2026). The AI-GPR Index: Measuring Geopolitical Risk using Artificial Intelligence. Published monthly Iran-country series and methodology. <link href="https://www.matteoiacoviello.com/ai_gpr.html">Author data and paper</link>. This benchmark is descriptive and not an Iran-specific daily regressor.')
-para('<b>Financial data</b><br/>FRED daily series DGS2, DGS10, T10YIE, SP500, BAMLC0A4CBBB, BAMLH0A0HYM2, DCOILBRENTEU, DCOILWTICO, DTWEXBGS, VIXCLS, DEXUSEU, DEXJPUS, NIKKEI225. Federal Reserve, EIA, S&amp;P, ICE BofA, CBOE, and Nikkei source series accessed via <link href="https://fred.stlouisfed.org">FRED</link>.<br/>Yahoo Finance daily adjusted-close histories for GLD, ACWI, FEZ, and EEM, accessed via public chart responses. All observations downloaded September 18, 2026; market sample ends September 17, with earlier latest observations for lagged series.')
+para('<b>Financial data</b><br/>FRED daily series DGS2, DGS10, T10YIE, SP500, BAMLC0A4CBBB, BAMLH0A0HYM2, DCOILBRENTEU, and DTWEXBGS. Federal Reserve, EIA, S&amp;P, and ICE BofA source series accessed via <link href="https://fred.stlouisfed.org">FRED</link>.<br/>Yahoo Finance daily adjusted-close history for GLD. All observations were downloaded September 18, 2026; the market sample ends September 17, with an earlier latest observation for Brent.')
 para('<b>Macro calendars</b><br/><link href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">Federal Reserve FOMC calendar</link>; <link href="https://www.bls.gov/schedule/news_release/cpi.htm">BLS CPI calendar</link>; <link href="https://www.bls.gov/schedule/news_release/empsit.htm">BLS employment calendar</link>. Dates are preserved in summary.json and analyze.py.')
 sub('Reproduce and inspect')
 para('README.md explains execution and departures. The scripts retrieve sources, score headlines, select H/L pairs, estimate all models, test algebra and units, and build this report from saved estimates. The principal tables are table2_sensitivities.csv, table3_variance.csv, and news_associations.csv. Source manifests record URLs and hashes. Bootstrap seeds are fixed; the main estimator uses 1,999 draws, and robustness tables use 399 draws.')

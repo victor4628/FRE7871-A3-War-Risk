@@ -9,9 +9,10 @@ for loading in [2.,-3.]:
     a=np.c_[rng.normal(0,2,n),np.zeros(n)];b=np.c_[rng.normal(0,.5,n),np.zeros(n)]
     a[:,1]=loading*a[:,0]+rng.normal(0,1,n);b[:,1]=loading*b[:,0]+rng.normal(0,1,n)
     a[:,0]+=rng.normal(0,.4,n);b[:,0]+=rng.normal(0,.4,n)
-    d,e1,e2=cov_stats(a,b);e3,se=iv(a,b,True);ez,_=iv(a,b,False)
+    d,e1,e2=cov_stats(a,b);e3,se=iv(a,b,'both');ez,_=iv(a,b,'z1');ez2,_=iv(a,b,'z2')
     assert abs(e1-loading)<.03 and abs(e2-loading)<.03 and abs(e3-loading)<.03
     assert abs(ez-e1)<1e-10,'Instrument one must equal covariance ratio'
+    assert abs(ez2-e2)<1e-10,'Instrument two must equal covariance ratio'
     assert se>0
 OUT=ROOT/'output/analysis';s=json.loads((OUT/'summary.json').read_text())
 news=pd.read_csv(OUT/'news_daily.csv',index_col=0,parse_dates=True)
@@ -29,7 +30,10 @@ check=levels.DGS2.diff().reindex(changes.index)*100
 assert np.nanmax(np.abs(changes.DGS2-check))<1e-8,'Yield conversion must use basis points'
 tables=pd.read_csv(OUT/'table2_sensitivities.csv')
 assert np.allclose(tables.e1_beta*-25,tables.e1_effect_minus25bp)
+assert set(changes.columns)=={'DGS2','DGS10','T10YIE','SP500','BAMLC0A4CBBB','BAMLH0A0HYM2','DCOILBRENTEU','GLD','DTWEXBGS'}
+assert tables[['e1_robust_se_effect','e2_robust_se_effect','e3_robust_se_effect']].notna().all().all()
+assert (tables[['e1_robust_se_effect','e2_robust_se_effect','e3_robust_se_effect']]>=0).all().all()
 assert s['archive_failures']==0,'Complete the news archive before delivery'
 assert s['US_sessions']==len(changes)
-result={'status':'passed','checks':['Known positive and negative factor loadings recovered in simulation','IV1 equals difference-of-second-moment estimator','Disjoint unique event and control days','Macro dates excluded and prewar/wartime matching enforced','Yield units and shock normalization checked','News archive coverage complete','Sample end obeyed'],'matched_pairs':len(p),'financial_variables':len(changes.columns)}
+result={'status':'passed','checks':['Known positive and negative factor loadings recovered in simulation','IV1 and IV2 equal their difference-of-second-moment estimators','Robust standard errors produced for IV1, IV2, and both instruments','Main financial-variable set matches the original-paper scope and documented proxies','Disjoint unique event and control days','Macro dates excluded and prewar/wartime matching enforced','Yield units and shock normalization checked','News archive coverage complete','Sample end obeyed'],'matched_pairs':len(p),'financial_variables':len(changes.columns)}
 (OUT/'validation.json').write_text(json.dumps(result,indent=2));print(json.dumps(result,indent=2))

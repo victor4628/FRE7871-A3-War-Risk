@@ -8,7 +8,7 @@ tasks=[]
 for f in ['ai_gpr_data_daily.csv','ai_gpr_country_monthly.csv','ai_gpr_country_eventtype_monthly.csv']:
     tasks.append((f,'https://www.matteoiacoviello.com/ai_gpr_files/'+f))
 tasks.append(('AI_GPR_PAPER.pdf','https://www.matteoiacoviello.com/research_files/AI_GPR_PAPER.pdf'))
-for s in ['DGS2','DGS10','T10YIE','SP500','BAMLC0A4CBBB','BAMLH0A0HYM2','DCOILBRENTEU','DCOILWTICO','DTWEXBGS','VIXCLS','DEXUSEU','DEXJPUS','NIKKEI225']:
+for s in ['DGS2','DGS10','T10YIE','SP500','BAMLC0A4CBBB','BAMLH0A0HYM2','DCOILBRENTEU','DTWEXBGS']:
     tasks.append((s+'.csv','https://fred.stlouisfed.org/graph/fredgraph.csv?'+urllib.parse.urlencode({'id':s,'cosd':'2025-12-01','coed':'2026-09-17'})))
 def fetch(task):
     name,url=task

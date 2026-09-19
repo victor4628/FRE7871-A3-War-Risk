@@ -3,20 +3,5 @@
     "symbol": "GLD",
     "url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=1764547200&period2=1789689600&interval=1d",
     "bytes": 22539
-  },
-  {
-    "symbol": "ACWI",
-    "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACWI?period1=1764547200&period2=1789689600&interval=1d",
-    "bytes": 23086
-  },
-  {
-    "symbol": "FEZ",
-    "url": "https://query1.finance.yahoo.com/v8/finance/chart/FEZ?period1=1764547200&period2=1789689600&interval=1d",
-    "bytes": 22525
-  },
-  {
-    "symbol": "EEM",
-    "url": "https://query1.finance.yahoo.com/v8/finance/chart/EEM?period1=1764547200&period2=1789689600&interval=1d",
-    "bytes": 22700
   }
 ]

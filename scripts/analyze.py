@@ -14,12 +14,9 @@ META={
  'T10YIE':('US 10-year breakeven','bp','diff100'),
  'SP500':('S&P 500','%','log100'), 'BAMLC0A4CBBB':('US BBB OAS','bp','diff100'),
  'BAMLH0A0HYM2':('US high-yield OAS','bp','diff100'),
- 'DCOILBRENTEU':('Brent spot','USD/bbl','diff'), 'DCOILWTICO':('WTI spot','USD/bbl','diff'),
- 'DTWEXBGS':('Broad US dollar','%','log100'), 'VIXCLS':('VIX','points','diff'),
- 'DEXUSEU':('EUR/USD','%','log100'), 'DEXJPUS':('USD/JPY','%','log100'),
- 'NIKKEI225':('Nikkei 225 local close','%','log100'),
- 'GLD':('Gold ETF GLD','%','log100'),'ACWI':('Global equity ETF ACWI','%','log100'),
- 'FEZ':('Euro-area equity ETF FEZ','%','log100'),'EEM':('EM equity ETF EEM','%','log100')}
+ 'DCOILBRENTEU':('Brent spot (oil proxy)','USD/bbl','diff'),
+ 'GLD':('Gold ETF GLD (gold proxy)','%','log100'),
+ 'DTWEXBGS':('Broad US dollar','%','log100')}
 FOMC=['01-28','03-18','04-29','06-17','07-29','09-16']
 CPI=['01-13','02-13','03-11','04-10','05-12','06-10','07-14','08-12','09-11']
 JOBS=['01-09','02-11','03-06','04-03','05-08','06-05','07-02','08-07','09-04']
@@ -38,7 +35,7 @@ PAT={
 def load_levels():
     cols={}
     for k in META:
-        if k in ['GLD','ACWI','FEZ','EEM']:
+        if k=='GLD':
             j=json.loads((RAW/(k+'.json')).read_text()); r=j['chart']['result'][0]
             dates=pd.to_datetime(r['timestamp'],unit='s',utc=True).tz_convert('America/New_York').tz_localize(None).normalize()
             vals=r['indicators'].get('adjclose',[{}])[0].get('adjclose',r['indicators']['quote'][0]['close'])
@@ -100,10 +97,10 @@ def match(data,q=.8,lag=0,start=None,end=None):
         lows.remove(lo);pairs.append((day,lo))
     return sorted(pairs),float(cutoff)
 def moments(a):return a.T@a/len(a) # Source-paper zero-mean second moments.
-def iv(a,b,combined=False):
+def iv(a,b,instruments='z1'):
     n=len(a); data=np.vstack([a,b]); x=data[:,0]; y=data[:,1]
     sign=np.r_[np.ones(n),-np.ones(n)]; z=data*sign[:,None]
-    z=z if combined else z[:,:1]
+    z=z if instruments=='both' else z[:,[0 if instruments=='z1' else 1]]
     W=np.linalg.pinv(z.T@z); zx=z.T@x; zy=z.T@y
     den=zx@W@zx; beta=float(zx@W@zy/den) if den>1e-15 else np.nan
     res=y-beta*x
@@ -154,7 +151,10 @@ def estimate(changes,news,pairs,bootstrap=1999):
         ps=[(h,l) for h,l in pairs if changes.loc[[h,l],['DGS2',k]].notna().all().all()]
         if len(ps)<8:continue
         a=changes.loc[[h for h,l in ps],['DGS2',k]].to_numpy(); b=changes.loc[[l for h,l in ps],['DGS2',k]].to_numpy()
-        d,e1,e2=cov_stats(a,b); e3,se3=iv(a,b,True)
+        d,e1,e2=cov_stats(a,b)
+        iv1,se1=iv(a,b,'z1'); iv2,se2=iv(a,b,'z2'); e3,se3=iv(a,b,'both')
+        if not (np.isclose(e1,iv1,equal_nan=True) and np.isclose(e2,iv2,equal_nan=True)):
+            raise ValueError('IV regression and covariance-ratio estimates disagree')
         # Regime-specific demeaning robustness.
         dc,ec1,ec2=cov_stats(a-a.mean(0),b-b.mean(0))
         first=sm.OLS(np.r_[a[:,0],b[:,0]],sm.add_constant(np.r_[a[:,0],-b[:,0]])).fit(cov_type='HC1')
@@ -172,7 +172,9 @@ def estimate(changes,news,pairs,bootstrap=1999):
         arset,arp=ar_confidence(a,b)
         r=results.append({'series':k,'variable':name,'unit':unit,'pairs':n,'e1_beta':e1,'e2_beta':e2,'e3_beta':e3,
             'e1_effect_minus25bp':-25*e1,'e2_effect_minus25bp':-25*e2,'e3_effect_minus25bp':-25*e3,
-            'e3_robust_se_effect':25*se3,'e1_block_ci_lo':ci[0],'e1_block_ci_hi':ci[1],
+            'e1_robust_se_effect':25*se1,'e2_robust_se_effect':25*se2,'e3_robust_se_effect':25*se3,
+            'e1_robust_p':float(2*stats.norm.sf(abs(e1/max(se1,1e-15)))),'e2_robust_p':float(2*stats.norm.sf(abs(e2/max(se2,1e-15)))),'e3_robust_p':float(2*stats.norm.sf(abs(e3/max(se3,1e-15)))),
+            'e1_block_ci_lo':ci[0],'e1_block_ci_hi':ci[1],
             'centered_e1_effect':-25*ec1,'delta_anchor_second_moment':d[0,0], 'delta_anchor_ci_lo':dvci[0],'delta_anchor_ci_hi':dvci[1],
             'bootstrap_prob_positive_anchor_shift':pr,'first_stage_robust_F_z1':F,'AR_zero_p':arp,'AR_effect_confidence_set':arset,
             'relative_rank1_residual':abs(d[1,1]-e1*e1*d[0,0])/max(abs(d[1,1]),1e-12)})
@@ -218,7 +220,7 @@ def main():
     if robustness:pd.concat(robustness).to_csv(OUT/'robustness.csv',index=False)
     coverage=pd.DataFrame({'series':list(META),'variable':[v[0] for v in META.values()],'unit':[v[1] for v in META.values()],'observed_changes':[int(changes[k].notna().sum()) for k in META]});coverage.to_csv(OUT/'market_coverage.csv',index=False)
     monthly=art[art.eligible].groupby(art.archive_date.str[:7]).agg(articles=('url','size'),war_articles=('relevant','sum'));monthly.to_csv(OUT/'corpus_monthly.csv')
-    summary={'sample_start':str(changes.index.min().date()),'sample_end':str(changes.index.max().date()),'US_sessions':len(changes),'articles_collected':len(art),'eligible_headlines':int(art.eligible.sum()),'war_headlines':int((art.eligible&art.relevant).sum()),'archive_days':len(manifest),'archive_failures':int(manifest.get('error',pd.Series()).notna().sum()),'complete_news_sessions':int(news.complete.fillna(False).sum()),'news_change_sessions':int(news.news_innovation.notna().sum()),'H_cutoff':cut,'pairs':len(pairs),'rules':PAT,'macro_dates':[str(x.date()) for x in MACRO],'macro_session_dates':[str(t.date()) for t in news.index[news.macro]]}
+    summary={'sample_start':str(changes.index.min().date()),'sample_end':str(changes.index.max().date()),'US_sessions':len(changes),'financial_variables':len(META),'articles_collected':len(art),'eligible_headlines':int(art.eligible.sum()),'war_headlines':int((art.eligible&art.relevant).sum()),'archive_days':len(manifest),'archive_failures':int(manifest.get('error',pd.Series()).notna().sum()),'complete_news_sessions':int(news.complete.fillna(False).sum()),'news_change_sessions':int(news.news_innovation.notna().sum()),'H_cutoff':cut,'pairs':len(pairs),'rules':PAT,'macro_dates':[str(x.date()) for x in MACRO],'macro_session_dates':[str(t.date()) for t in news.index[news.macro]]}
     (OUT/'summary.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
     print(json.dumps({k:v for k,v in summary.items() if k not in ['rules','macro_dates']},indent=2))
     if len(r):print(r[['variable','pairs','e1_effect_minus25bp','e2_effect_minus25bp','e3_effect_minus25bp','delta_anchor_second_moment','first_stage_robust_F_z1']].to_string(index=False))

@@ -12,5 +12,5 @@ def one(symbol):
         j=json.loads(b); print(symbol,len(j['chart']['result'][0]['timestamp']),flush=True)
         return {'symbol':symbol,'url':u,'bytes':len(b)}
     except Exception as e:return {'symbol':symbol,'url':u,'error':str(e)}
-with ThreadPoolExecutor(max_workers=3) as p:r=list(p.map(one,['GLD','ACWI','FEZ','EEM']))
+with ThreadPoolExecutor(max_workers=1) as p:r=list(p.map(one,['GLD']))
 (RAW/'etf_manifest.json').write_text(json.dumps(r,indent=2),encoding='utf-8'); print(r)

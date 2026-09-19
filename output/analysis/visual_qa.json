@@ -19,5 +19,5 @@
     14,
     15
   ],
-  "findings": "All final pages inspected; no clipping, overlap, broken tables, or missing glyphs. Table ampersands corrected before final render."
+  "findings": "All 15 final revised pages inspected; no clipping, overlap, broken tables, or missing glyphs. The Table 2 analogue shows heteroskedasticity-robust standard errors for IV1, IV2, and both instruments."
 }
