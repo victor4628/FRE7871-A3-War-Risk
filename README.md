@@ -4,6 +4,8 @@ Empirical application of Roberto Rigobon's **Identification through Heteroskedas
 
 The final application covers **9 original-paper-scope financial variables (including the Treasury anchor), 178 sessions, 1,029 eligible headlines, 515 war-relevant headlines, and 18 matched event/control pairs**. It is a direct Iran-2026 analogue of the Rigobon-Sack design: the war setting and news classification change, while the core US-market variable scope, event/control variance comparison, Treasury normalization, two IV estimators, and combined-instrument estimator follow the paper. The Treasury anchor is weak (IV1 robust first-stage F **0.886**; its second-moment shift has a block-bootstrap interval spanning zero). No signed-news association survives false-discovery correction. The conditional replication estimates are **exploratory**, not reliable causal Iran war-risk sensitivities. This analysis was not preregistered.
 
+**Interpretation:** The inability of this specification to isolate a precise causal effect does not mean the war had no market effect. On March 2, the first US session after the February 28 outbreak, Brent spot rose **$5.92/bbl** and the US two-year Treasury yield rose **9 bp**. Brent rose another **$6.04/bbl** on March 3. These are observed, coincident movements, not estimates of how much of the change the war caused. The March 5 matched control also saw a **$7.03/bbl** Brent increase despite lower measured news innovation, illustrating the difficulty of finding genuinely low-war-risk days during active conflict.
+
 ## Deliverables
 
 - `output/pdf/iran_war_risk_2026.pdf`: methodology, findings, replication tables, diagnostics, and event/control appendix.

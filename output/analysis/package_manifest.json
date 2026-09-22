@@ -1,8 +1,8 @@
 [
   {
     "path": "README.md",
-    "bytes": 9997,
-    "sha256": "537608525f73a7688e92c2e233061971c7b5ba406c190f4127c01cd4f07b2f45"
+    "bytes": 10620,
+    "sha256": "9627d57ccdc470c0a251f35d860769fdae50bcd1b171cadd566a38c6c2b29d1f"
   },
   {
     "path": "requirements.txt",
@@ -26,8 +26,8 @@
   },
   {
     "path": "scripts/build_report.py",
-    "bytes": 36538,
-    "sha256": "d9c45b8bb2b8d7bda472472717809e4b403a1a96fe6d539ff8587ea455fb8c8c"
+    "bytes": 37469,
+    "sha256": "62903367626adc56cdfc24b09edc13dc0cf66c5a96c10dcf2ed32537c4e4bb49"
   },
   {
     "path": "scripts/download_data.py",
@@ -192,7 +192,7 @@
   {
     "path": "output/analysis/report_structure.json",
     "bytes": 991,
-    "sha256": "379bb170981cd90cdf9b53a4a67e7065f498be406c951e932b32fc635d98ca4b"
+    "sha256": "7b0364498f3a61aa2f818d867e4a2a748ae4a39f1e5984fbc671d9e3d0c83a8f"
   },
   {
     "path": "output/analysis/robustness.csv",
@@ -221,8 +221,8 @@
   },
   {
     "path": "output/analysis/visual_qa.json",
-    "bytes": 462,
-    "sha256": "12a323a279382695d825251e7026e1603a7fad2993c6cd28c059f7606b924396"
+    "bytes": 443,
+    "sha256": "2442391f5c9ad2e3eb203cd8397adb2b7ff550d7387705298d142328b5e4ea8a"
   },
   {
     "path": "output/figures/identification_checks.png",
@@ -241,12 +241,12 @@
   },
   {
     "path": "output/iran_war_risk_2026.md",
-    "bytes": 30463,
-    "sha256": "036cbff7f51617d2fcd6865d380535c3590b8598a32f6a20d978dbc284f28fa6"
+    "bytes": 31123,
+    "sha256": "61654c3a7cc16524c6c80440808e5bda555eed43a7b72102c292d57c7c0ef32f"
   },
   {
     "path": "output/pdf/iran_war_risk_2026.pdf",
-    "bytes": 266440,
-    "sha256": "5b3d1b2205c1f5ffb5c9d2ca598cfe74a425b7fa0c59683f50aef61ed7ef19d6"
+    "bytes": 266853,
+    "sha256": "9e6d30d4950c19878e69968e3026ebdf4f45edc62d97be478b2860acc079cafc"
   }
 ]

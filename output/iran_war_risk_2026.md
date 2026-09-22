@@ -1,11 +1,11 @@
 
 ## Iran war risk and financial sensitivities in 2026
 
-Direct Rigobon-Sack replication with Iran replacing Iraq, plus an NLP extensionJanuary 2 to September 17, 2026 | Prepared September 18, 2026
+Rigobon-Sack replication with Iran replacing Iraq, plus an NLP extensionJanuary 2 to September 17, 2026 | Revised September 22, 2026
 
-The core exercise keeps the original paper's event/control heteroskedasticity design, US-market outcome scope, two-year Treasury normalization, two single-instrument estimators, and combined-IV estimator. Iran-war news in 2026 replaces Iraq-war news; documented public-data proxies replace unavailable original instruments.
+The core exercise keeps the original paper's event/control heteroskedasticity design, US-market outcome scope, two-year Treasury normalization, two single-instrument estimators, and combined-IV estimator. Iran-war news in 2026 replaces Iraq-war news; documented public-data proxies replace unavailable original financial series.
 
-Main finding: the requested estimators can be implemented with public 2026 data, but this specification does not identify precise causal Iran war-risk sensitivities. The US two-year Treasury anchor is weak, normalized estimates change markedly across instruments and event definitions, and the separate signed-news associations do not survive multiple-comparison correction.
+Main finding: markets moved substantially around Iran-war developments, but this study cannot determine how much was caused by one Iran war-risk factor. The two-year Treasury anchor is weak, normalized estimates vary across instruments and events, and signed-news associations do not survive multiple-comparison correction. This does not show that the war had no market effect.
 
 | Coverage | Final study |
 | --- | --- |
@@ -28,7 +28,7 @@ Main finding: the requested estimators can be implemented with public 2026 data,
 
 These are observed year-to-date changes, not effects attributable to the war. In particular, yields rose over the year while oil became more expensive; the 2003 assumption that an increase in war risk should be oriented toward a Treasury-yield fall cannot be imported automatically.
 
-The report supplies conditional sensitivity and variance tables, an auditable event list, weak-identification uncertainty, NLP regressions, robustness checks, and the scripts and source manifests needed to reproduce the application.
+Conflict-onset example: on March 2, the first US session after the February 28 outbreak, Brent rose $5.92/bbl and the two-year Treasury yield rose 9 bp. Brent rose another $6.04 on March 3, a two-session gain of $11.96; the yield rose 13 bp. These are observed market moves, not causal war-effect estimates. The yield increase also makes the original paper's Treasury-fall normalization hard to interpret as an Iran-war-risk increase.
 
 
 ## How the two references fit together
@@ -119,6 +119,8 @@ FOMC decision, CPI, and employment-report dates are excluded from both sets; a r
 | 2026-08-24 | 2026-08-21 | 5 | 0 | 1.79 |
 
 This is the complete source-paper Table 1 analogue. A session includes all mapped news, potentially from the preceding weekend; it is not a single signed event. Sources and individual labels are in headline_scores.csv. Both escalation and peace news qualify. Main-period prewar events are sparse; an isolated prewar regression does not meet the eight-pair reporting threshold.
+
+The March 2 event is paired with March 5 because the latter has lower measured headline innovation, yet Brent also rose $7.03 on March 5. A low-news control can still contain substantial war-related market movement during an active conflict. This weakens the clean high-versus-low war-shock-variance comparison required by the paper.
 
 
 ## Selected war news developments from January to March
@@ -283,7 +285,7 @@ FRED spot oil, Treasury, broad-dollar, and equity observations are not synchroni
 
 ## What the evidence supports
 
-The 2026 Iran conflict coincides with substantial news intensity and market changes, but the requested public-data application does not isolate a precise single war-risk factor. The data support a completed replication exercise with inconclusive causal sensitivities, rather than a claim that war risk has no financial effects.
+The 2026 Iran conflict coincides with substantial news intensity and market changes, but the requested public-data application does not isolate a precise single war-risk factor. The March 2-3 Brent rise documents a large market move around the outbreak. The failed identification and statistically inconclusive signed-news regressions concern this model's ability to attribute and size the effect; they do not show that war had no financial effect.
 
 ### Use the estimates as research diagnostics
 

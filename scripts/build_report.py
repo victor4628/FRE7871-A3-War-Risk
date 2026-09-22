@@ -64,9 +64,9 @@ def ytd(k):
     return base,last,str(d.index[-1].date())
 
 section('Iran war risk and financial sensitivities in 2026')
-para('<b>Direct Rigobon-Sack replication with Iran replacing Iraq, plus an NLP extension</b><br/>January 2 to September 17, 2026 | Prepared September 18, 2026')
-para('The core exercise keeps the original paper\'s event/control heteroskedasticity design, US-market outcome scope, two-year Treasury normalization, two single-instrument estimators, and combined-IV estimator. Iran-war news in 2026 replaces Iraq-war news; documented public-data proxies replace unavailable original instruments.')
-para('<b>Main finding:</b> the requested estimators can be implemented with public 2026 data, but this specification does not identify precise causal Iran war-risk sensitivities. The US two-year Treasury anchor is weak, normalized estimates change markedly across instruments and event definitions, and the separate signed-news associations do not survive multiple-comparison correction.')
+para('<b>Rigobon-Sack replication with Iran replacing Iraq, plus an NLP extension</b><br/>January 2 to September 17, 2026 | Revised September 22, 2026')
+para('The core exercise keeps the original paper\'s event/control heteroskedasticity design, US-market outcome scope, two-year Treasury normalization, two single-instrument estimators, and combined-IV estimator. Iran-war news in 2026 replaces Iraq-war news; documented public-data proxies replace unavailable original financial series.')
+para('<b>Main finding:</b> markets moved substantially around Iran-war developments, but this study cannot determine how much was caused by one Iran war-risk factor. The two-year Treasury anchor is weak, normalized estimates vary across instruments and events, and signed-news associations do not survive multiple-comparison correction. This does not show that the war had no market effect.')
 table(['Coverage','Final study'],[['Financial variables','9 including the Treasury anchor; original-paper scope'],['Observed US sessions','178'],['News archive coverage','260 calendar days, no failed dates'],['Collected / eligible / war-relevant headlines','1,601 / 1,029 / 515'],['Matched event / control days','18 / 18; fewer pairs for some outcomes']],[178,334])
 sub('Observed market changes are substantial')
 rows=[]
@@ -75,7 +75,8 @@ for k in ['DGS2','DGS10','SP500','DCOILBRENTEU','BAMLH0A0HYM2','GLD']:
     rows.append([cov.set_index('series').loc[k,'variable'],num(change)+' '+unit,d])
 table(['Variable','Change since Dec 31','Last observation'],rows,[225,155,132])
 para('These are observed year-to-date changes, not effects attributable to the war. In particular, yields rose over the year while oil became more expensive; the 2003 assumption that an increase in war risk should be oriented toward a Treasury-yield fall cannot be imported automatically.',small=True)
-para('The report supplies conditional sensitivity and variance tables, an auditable event list, weak-identification uncertainty, NLP regressions, robustness checks, and the scripts and source manifests needed to reproduce the application.',small=True)
+oil0=chg.loc['2026-03-02','DCOILBRENTEU'];oil1=chg.loc['2026-03-03','DCOILBRENTEU'];y0=chg.loc['2026-03-02','DGS2'];y1=chg.loc['2026-03-03','DGS2']
+para('<b>Conflict-onset example:</b> on March 2, the first US session after the February 28 outbreak, Brent rose $'+num(oil0)+'/bbl and the two-year Treasury yield rose '+num(y0,0)+' bp. Brent rose another $'+num(oil1)+' on March 3, a two-session gain of $'+num(oil0+oil1)+'; the yield rose '+num(y0+y1,0)+' bp. These are observed market moves, not causal war-effect estimates. The yield increase also makes the original paper\'s Treasury-fall normalization hard to interpret as an Iran-war-risk increase.',small=True)
 
 section('How the two references fit together')
 para('Rigobon (2003) supplies the identification principle: changing the relative variances of otherwise orthogonal structural shocks can reveal contemporaneous relationships, provided coefficients remain stable. Multiple regimes can supply additional restrictions and tests. A proportional rise in every shock variance adds little identifying information.')
@@ -111,6 +112,7 @@ for _,p in pairs.iterrows():
     h=p.H;l=p.L;rows.append([str(h.date()),str(l.date()),str(int(news.loc[h,'war_articles'])),str(int(news.loc[l,'war_articles'])),num(p.H_innovation,2)])
 table(['Event session H','Control session L','War news H','War news L','Innovation H'],rows,[117,117,88,88,102])
 para('This is the complete source-paper Table 1 analogue. A session includes all mapped news, potentially from the preceding weekend; it is not a single signed event. Sources and individual labels are in headline_scores.csv. Both escalation and peace news qualify. Main-period prewar events are sparse; an isolated prewar regression does not meet the eight-pair reporting threshold.',small=True)
+para('The March 2 event is paired with March 5 because the latter has lower measured headline innovation, yet Brent also rose $'+num(chg.loc['2026-03-05','DCOILBRENTEU'])+' on March 5. A low-news control can still contain substantial war-related market movement during an active conflict. This weakens the clean high-versus-low war-shock-variance comparison required by the paper.',small=True)
 
 EVENTS={
  '2026-01-12':('Warnings about US intervention amid Iranian protests, alongside offers of talks.','warns US'),
@@ -208,7 +210,7 @@ para('The independent signed-news regressions also use next-session timing and a
 para('FRED spot oil, Treasury, broad-dollar, and equity observations are not synchronized intraday. This timing limitation remains even after restricting the main table to the original paper\'s US-market scope.',small=True)
 
 section('What the evidence supports')
-para('<b>The 2026 Iran conflict coincides with substantial news intensity and market changes, but the requested public-data application does not isolate a precise single war-risk factor.</b> The data support a completed replication exercise with inconclusive causal sensitivities, rather than a claim that war risk has no financial effects.')
+para('<b>The 2026 Iran conflict coincides with substantial news intensity and market changes, but the requested public-data application does not isolate a precise single war-risk factor.</b> The March 2-3 Brent rise documents a large market move around the outbreak. The failed identification and statistically inconclusive signed-news regressions concern this model\'s ability to attribute and size the effect; they do not show that war had no financial effect.')
 sub('Use the estimates as research diagnostics')
 para('The original model\'s Treasury normalization is weak in this application. Some conditional estimates point in different directions across instruments or event definitions. The variance shares depend on those same unstable loadings. Therefore they cannot serve as reliable portfolio stress coefficients or as an attribution of year-to-date market returns.')
 sub('Separate the most relevant channels in a stronger design')
