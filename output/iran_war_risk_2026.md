@@ -1,15 +1,27 @@
+# Iran War Risk and U.S. Financial Markets
 
-## Iran war risk and financial sensitivities in 2026
+An application of Rigobon and Sack (2003) to the 2026 Iran conflict
 
-Rigobon-Sack replication with Iran replacing Iraq, plus an NLP extensionJanuary 2 to September 17, 2026 | Revised September 22, 2026
+**Victor Chen** | NYU NetID: yc8027
 
-The core exercise keeps the original paper's event/control heteroskedasticity design, US-market outcome scope, two-year Treasury normalization, two single-instrument estimators, and combined-IV estimator. Iran-war news in 2026 replaces Iraq-war news; documented public-data proxies replace unavailable original financial series.
+Repository: https://github.com/victor4628/FRE7871-A3-War-Risk
 
-Main finding: markets moved substantially around Iran-war developments, but this study cannot determine how much was caused by one Iran war-risk factor. The two-year Treasury anchor is weak, normalized estimates vary across instruments and events, and signed-news associations do not survive multiple-comparison correction. This does not show that the war had no market effect.
+## Abstract
+
+This report applies the heteroskedasticity identification design in The Effects of War Risk on U.S. Financial Markets to Iran-war news and daily U.S. market data in 2026. Headline analysis selects high-news and nearby lower-news dates. The study reproduces the paper's two single-instrument estimates and combined-IV estimate using available financial series, and reports standard errors and weak-identification diagnostics.
+
+Markets moved substantially around the conflict, especially oil. The two-year Treasury variance shift is too weak to assign a precise causal sensitivity to a single Iran war-risk factor. These results document the limits of this replication while preserving the observed market response.
+
+
+## Executive summary
+
+The core exercise follows the original paper's event/control heteroskedasticity design, two-year Treasury normalization, two single-instrument estimators, and combined-IV estimator. Iran-war news in 2026 replaces Iraq-war news; documented public-data proxies replace unavailable original financial series.
+
+**Main finding:** markets moved substantially around Iran-war developments, but this study cannot determine how much was caused by one Iran war-risk factor. The two-year Treasury anchor is weak, normalized estimates vary across instruments and events, and signed-news associations do not survive multiple-comparison correction. This does not show that the war had no market effect.
 
 | Coverage | Final study |
 | --- | --- |
-| Financial variables | 9 including the Treasury anchor; original-paper scope |
+| Financial variables | 8 comparable outcomes plus the two-year Treasury anchor |
 | Observed US sessions | 178 |
 | News archive coverage | 260 calendar days, no failed dates |
 | Collected / eligible / war-relevant headlines | 1,601 / 1,029 / 515 |
@@ -28,7 +40,7 @@ Main finding: markets moved substantially around Iran-war developments, but this
 
 These are observed year-to-date changes, not effects attributable to the war. In particular, yields rose over the year while oil became more expensive; the 2003 assumption that an increase in war risk should be oriented toward a Treasury-yield fall cannot be imported automatically.
 
-Conflict-onset example: on March 2, the first US session after the February 28 outbreak, Brent rose $5.92/bbl and the two-year Treasury yield rose 9 bp. Brent rose another $6.04 on March 3, a two-session gain of $11.96; the yield rose 13 bp. These are observed market moves, not causal war-effect estimates. The yield increase also makes the original paper's Treasury-fall normalization hard to interpret as an Iran-war-risk increase.
+**Conflict-onset example:** on March 2, the first US session after the February 28 outbreak, Brent rose $5.92/bbl and the two-year Treasury yield rose 9 bp. Brent rose another $6.04 on March 3, a two-session gain of $11.96; the yield rose 13 bp. These are observed market moves, not causal war-effect estimates. The yield increase also makes the original paper's Treasury-fall normalization hard to interpret as an Iran-war-risk increase.
 
 
 ## How the two references fit together
@@ -41,9 +53,9 @@ Rigobon and Sack (2003) apply a narrower version to a latent war-news factor. Th
 
 For financial changes x(t), let x(t) = b f(t) + u(t), where f is the unobserved war factor, b its stable reduced-form loadings, and u contains other common and idiosyncratic influences. With b(1) = 1 for the Treasury anchor, the identifying restriction is:
 
-Delta Omega = Omega(H) - Omega(L) = Delta Var(f) b b transpose.
+**Delta Omega = Omega(H) - Omega(L) = Delta Var(f) b b transpose.**
 
-This implies a positive, rank-one covariance shift when H has greater war-shock variance. For outcome j, the two ratio estimators are d1 = Delta Omega(1,j) / Delta Omega(1,1) and d2 = Delta Omega(j,j) / Delta Omega(1,j). The combined estimator uses both sign-switched instruments in 2SLS.
+This implies a positive, rank-one covariance shift when H has greater war-shock variance. For outcome j, the two ratio estimators are **d1 = Delta Omega(1,j) / Delta Omega(1,1)** and **d2 = Delta Omega(j,j) / Delta Omega(1,j)**. The combined estimator uses both sign-switched instruments in 2SLS.
 
 ### NLP selects the regimes and provides a separate proxy
 
@@ -54,7 +66,7 @@ The factor scale is arbitrary. Multiplying each relative loading by -25 bp repro
 
 ## The financial dataset and replication departures
 
-Public daily observations are frozen at the retrieved September 18 vintage. The common session calendar contains days with both Treasury and S&amp;P observations. No missing outcome is forward-filled; an event/control pair is dropped for an outcome if either daily change is unavailable.
+The analysis uses a fixed snapshot of public daily observations, with retrieval details preserved in the source manifests. The common session calendar contains days with both Treasury and S&P observations. No missing outcome is forward-filled; an event/control pair is dropped for an outcome if either daily change is unavailable.
 
 | Variable | Identifier | Change unit | N |
 | --- | --- | --- | --- |
@@ -68,7 +80,7 @@ Public daily observations are frozen at the retrieved September 18 vintage. The 
 | Gold ETF GLD (gold proxy) | GLD | % | 178 |
 | Broad US dollar | DTWEXBGS | % | 174 |
 
-Yields and spreads use first differences multiplied by 100 to convert percentage points to basis points. S&amp;P 500, GLD, and the broad dollar use 100 times log differences. Oil uses dollar changes per barrel.
+Yields and spreads use first differences multiplied by 100 to convert percentage points to basis points. S&P 500, GLD, and the broad dollar use 100 times log differences. Oil uses dollar changes per barrel.
 
 The main table now follows the original paper's US-market scope. Constant-maturity Treasury yields replace estimated off-the-run par yields, ICE option-adjusted spreads replace the original credit spreads, Brent spot replaces 12-month oil futures, and GLD adjusted returns replace a dollar bullion-price change. A comparable public on-the-run Treasury liquidity-premium series was not obtained and is explicitly omitted. European, Japanese, global-equity, emerging-market, VIX, bilateral-FX, and duplicate WTI extensions are excluded from the replication tables.
 
@@ -95,7 +107,7 @@ Source: own archive NLP; published Iacoviello-Tong Iran AI-GPR monthly data. The
 
 A session is eligible for H if its absolute change in log(1 + war-relevant headline count) is in the upper 20% of non-macro news innovations and it has at least two relevant headlines. The cutoff is 1.051. L must have an innovation at or below the median and no more than half the H headline count. Controls are selected nearest in time without replacement, within ten US sessions and the same prewar/wartime period.
 
-FOMC decision, CPI, and employment-report dates are excluded from both sets; a release on a closed-market date maps to the next joint session. This does not remove all other macroeconomic, tariff, earnings, or geopolitical news. Weekend and holiday news is accumulated into the next joint Treasury/S&amp;P session. Exact publication times are unavailable; the labels are retrospective.
+FOMC decision, CPI, and employment-report dates are excluded from both sets; a release on a closed-market date maps to the next joint session. This does not remove all other macroeconomic, tariff, earnings, or geopolitical news. Weekend and holiday news is accumulated into the next joint Treasury/S&P session. Exact publication times are unavailable; the labels are retrospective.
 
 | Event session H | Control session L | War news H | War news L | Innovation H |
 | --- | --- | --- | --- | --- |
@@ -161,9 +173,9 @@ These descriptions summarize selected developments in each mapped event session.
 The source companion lists the representative article URL, original publication date inferred from its URL, mapped US session, and these research descriptions. All other articles behind each event remain in headline_scores.csv. The source link does not imply that the selected article captures every development on the date.
 
 
-## Conditional sensitivities replicating Table 2
+## Table 2: Market Sensitivities
 
-Scenario: a latent-factor movement associated with a 25 bp decline in the US two-year yield. These estimates are supplied to replicate the original calculations; weak identification prevents treating them as calibrated increases in Iran war risk. An apparently precise combined-IV standard error does not resolve weak identification.
+**Scenario:** a latent-factor movement associated with a 25 bp decline in the US two-year yield. These estimates are supplied to replicate the original calculations; weak identification prevents treating them as calibrated increases in Iran war risk. An apparently precise combined-IV standard error does not resolve weak identification.
 
 | Outcome | Unit | Pairs | IV1 est. (SE) | IV2 est. (SE) | Both IVs est. (SE) |
 | --- | --- | --- | --- | --- | --- |
@@ -176,9 +188,9 @@ Scenario: a latent-factor movement associated with a 25 bp decline in the US two
 | Gold ETF GLD (gold proxy) | % | 18 | 0.28 (5.69) | -9.82 (444.97) | 0.40 (4.51) |
 | Broad US dollar | % | 18 | -1.32 (1.09) | -2.00 (2.75) | -1.46 (1.19) |
 
-Heteroskedasticity-robust standard errors are in parentheses. Stars use two-sided normal-reference p values: * p &lt; 0.10, ** p &lt; 0.05, *** p &lt; 0.01. IV1 uses sign(H/L) times the Treasury change; IV2 uses sign(H/L) times the outcome change; the combined estimator uses both. The regressions follow the paper's zero-mean, no-intercept formulation. With a weak first stage, conventional SEs and stars can be misleading, so the next page also reports weak-IV-robust confidence sets.
+Heteroskedasticity-robust standard errors are in parentheses. Stars use two-sided normal-reference p values: * p < 0.10, ** p < 0.05, *** p < 0.01. IV1 uses sign(H/L) times the Treasury change; IV2 uses sign(H/L) times the outcome change; the combined estimator uses both. The regressions follow the paper's zero-mean, no-intercept formulation. With a weak first stage, conventional SEs and stars can be misleading, so the next page also reports weak-IV-robust confidence sets.
 
-The S&amp;P conditional response is +1.85%, and the Brent response is -$25.33/bbl under the combined instruments. Their signs differ from the 2003 Iraq findings. Because the anchor is weak and the sign of a 2026 war shock is unverified, those signs are evidence against mechanically importing the original scenario, not evidence that war reliably benefits equities or lowers oil prices.
+The S&P conditional response is +1.85%, and the Brent response is -$25.33/bbl under the combined instruments. Their signs differ from the 2003 Iraq findings. Because the anchor is weak and the sign of a 2026 war shock is unverified, those signs are evidence against mechanically importing the original scenario, not evidence that war reliably benefits equities or lowers oil prices.
 
 
 ## Uncertainty and identification diagnostics
@@ -225,7 +237,7 @@ Energy disruption could raise inflation pressure and yields while growth fears c
 Consequently, the paper's 2003 elasticities should not be used as 2026 Iran portfolio stress parameters. The replicated 2026 point estimates are diagnostic outputs pending stronger identification, not replacement calibrated stress parameters.
 
 
-## Conditional variance calculations replicating Table 3
+## Table 3: Variance Calculations
 
 The paper's predicted shift for outcome j is d(j) squared times the anchor second-moment shift. The H share divides this by the observed H second moment. The all-session calculation divides the matched-event contribution by the sum of daily squared changes across available 2026 sessions. These are conditional algebraic calculations; causal lower-bound interpretation additionally requires valid identification and serial independence.
 
@@ -242,7 +254,7 @@ The paper's predicted shift for outcome j is d(j) squared times the anchor secon
 
 Moments have each outcome's daily-change unit squared. Financial outcomes have different units and cannot be compared by raw variance size. Outcome-specific missing pairs account for different samples.
 
-No reported share is endorsed as an identified war-risk variance bound. Weak loadings can generate implausible shares, while some observed outcome variances actually decline on H days. A numerically admissible percentage alone does not establish a causal decomposition. The CSV preserves raw results and flags percentages outside [0,100] rather than clipping them.
+**No reported share is endorsed as an identified war-risk variance bound.** Weak loadings can generate implausible shares, while some observed outcome variances actually decline on H days. A numerically admissible percentage alone does not establish a causal decomposition. The CSV preserves raw results and flags percentages outside [0,100] rather than clipping them.
 
 
 ## Signed news sensitivities for replication variables
@@ -261,7 +273,7 @@ This separate model regresses each daily financial change on standardized signed
 | Gold ETF GLD (gold proxy) | % | 0.125 | [-0.097, 0.348] | 0.518 | 177 |
 | Broad US dollar | % | 0.015 | [-0.025, 0.054] | 0.593 | 173 |
 
-All contemporaneous intervals include zero. The smallest Benjamini-Hochberg adjusted q value is 0.465. None of the 9 replication variables reaches q &lt; 0.05. Point estimates suggest higher oil prices and wider high-yield spreads alongside lower Treasury yields, but the data do not establish those responses statistically.
+All contemporaneous intervals include zero. The smallest Benjamini-Hochberg adjusted q value is 0.465. None of the 9 replication variables reaches q < 0.05. Point estimates suggest higher oil prices and wider high-yield spreads alongside lower Treasury yields, but the data do not establish those responses statistically.
 
 Dictionary measurement error, single-outlet selection, post-event reporting, missing timestamps, mixed peace and conflict news, and confounding macro shocks limit interpretation. These results are associations with measured news flow, not structural causal estimates.
 
@@ -285,7 +297,7 @@ FRED spot oil, Treasury, broad-dollar, and equity observations are not synchroni
 
 ## What the evidence supports
 
-The 2026 Iran conflict coincides with substantial news intensity and market changes, but the requested public-data application does not isolate a precise single war-risk factor. The March 2-3 Brent rise documents a large market move around the outbreak. The failed identification and statistically inconclusive signed-news regressions concern this model's ability to attribute and size the effect; they do not show that war had no financial effect.
+**The 2026 Iran conflict coincides with substantial news intensity and market changes, but this public-data application does not isolate a precise single war-risk factor.** The March 2-3 Brent rise documents a large market move around the outbreak. The failed identification and statistically inconclusive signed-news regressions concern this model's ability to attribute and size the effect; they do not show that war had no financial effect.
 
 ### Use the estimates as research diagnostics
 
@@ -301,23 +313,31 @@ A licensed corpus of full news texts with original publication timestamps would 
 
 Intraday oil-futures curves, inflation-linked and nominal yields, credit instruments, and the original Treasury liquidity measure would reduce proxy and timing differences. Any alternative anchor must show a strong variance shift and have its shock sign established using independent news. An oil anchor could be useful for an energy-disruption factor, but would not by itself identify broader war risk.
 
-The delivered cache, scripts, and tables provide the empirical baseline for those extensions. They retain all final labels, selections, and weak-identification results so another researcher can examine the design and replace assumptions transparently.
+The repository contains the data snapshot, scripts, and tables for independent examination of event labels, estimator assumptions, and uncertainty calculations.
 
 
 ## Sources and reproducibility
 
-Supplied referencesRigobon, Roberto (2003). Identification through Heteroskedasticity. The Review of Economics and Statistics 85(4), 777-792. Supplied PDF, 16 pages.Rigobon, Roberto and Brian Sack (2003). The Effects of War Risk on U.S. Financial Markets. NBER Working Paper 9609, April. Supplied PDF, 16 pages. Methods on PDF pages 4-8; normalization and interpretation on pages 9-11; Tables 1-3 on pages 14-16.
+**References**  
+Rigobon, Roberto (2003). "Identification through Heteroskedasticity." *The Review of Economics and Statistics* 85(4), 777-792.  
+Rigobon, Roberto and Brian Sack (2003). "The Effects of War Risk on U.S. Financial Markets." NBER Working Paper No. 9609. The event-selection design and Tables 1-3 provide the basis for this application.
 
-News and NLP benchmarkGuardian dated Iran-topic archive, January 1 to September 17, 2026. Guardian Iran archive.Iacoviello, Matteo and Jonathan Tong (2026). The AI-GPR Index: Measuring Geopolitical Risk using Artificial Intelligence. Published monthly Iran-country series and methodology. Author data and paper. This benchmark is descriptive and not an Iran-specific daily regressor.
+**News and NLP benchmark**  
+Guardian dated Iran-topic archive, January 1 to September 17, 2026. [Guardian Iran archive](https://www.theguardian.com/world/iran).  
+Iacoviello, Matteo and Jonathan Tong (2026). The AI-GPR Index: Measuring Geopolitical Risk using Artificial Intelligence. Published monthly Iran-country series and methodology. [Author data and paper](https://www.matteoiacoviello.com/ai_gpr.html). This benchmark is descriptive and not an Iran-specific daily regressor.
 
-Financial dataFRED daily series DGS2, DGS10, T10YIE, SP500, BAMLC0A4CBBB, BAMLH0A0HYM2, DCOILBRENTEU, and DTWEXBGS. Federal Reserve, EIA, S&amp;P, and ICE BofA source series accessed via FRED.Yahoo Finance daily adjusted-close history for GLD. All observations were downloaded September 18, 2026; the market sample ends September 17, with an earlier latest observation for Brent.
+**Financial data**  
+FRED daily series DGS2, DGS10, T10YIE, SP500, BAMLC0A4CBBB, BAMLH0A0HYM2, DCOILBRENTEU, and DTWEXBGS. Federal Reserve, EIA, S&P, and ICE BofA source series accessed via [FRED](https://fred.stlouisfed.org).  
+Yahoo Finance daily adjusted-close history for GLD. The market sample ends September 17, 2026, with an earlier last observation for Brent. Download times and source URLs are recorded in the repository manifests.
 
-Macro calendarsFederal Reserve FOMC calendar; BLS CPI calendar; BLS employment calendar. Dates are preserved in summary.json and analyze.py.
+**Macro calendars**  
+[Federal Reserve FOMC calendar](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm); [BLS CPI calendar](https://www.bls.gov/schedule/news_release/cpi.htm); [BLS employment calendar](https://www.bls.gov/schedule/news_release/empsit.htm). Dates are preserved in summary.json and analyze.py.
 
 ### Reproduce and inspect
+
+**Code, data, and report**  
+[https://github.com/victor4628/FRE7871-A3-War-Risk](https://github.com/victor4628/FRE7871-A3-War-Risk)
 
 README.md explains execution and departures. The scripts retrieve sources, score headlines, select H/L pairs, estimate all models, test algebra and units, and build this report from saved estimates. The principal tables are table2_sensitivities.csv, table3_variance.csv, and news_associations.csv. Source manifests record URLs and hashes. Bootstrap seeds are fixed; the main estimator uses 1,999 draws, and robustness tables use 399 draws.
 
 Validation recovered known positive and negative factor loadings in simulated data, verified equality of IV1 and the covariance ratio, checked disjoint matching and macro exclusions, checked basis-point conversions and the shock scale, and confirmed complete archive coverage. Verification establishes implementation correctness, not economic identification.
-
-Public source data retain their original owners' rights. The local research cache is not a grant to republish newspaper text, ICE statistics, or other licensed provider data.

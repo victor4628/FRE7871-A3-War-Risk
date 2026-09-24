@@ -1,8 +1,12 @@
 # Iran war risk in 2026
 
+Author: **Victor Chen**  
+NYU NetID: **yc8027**  
+Repository: **https://github.com/victor4628/FRE7871-A3-War-Risk**
+
 Empirical application of Roberto Rigobon's **Identification through Heteroskedasticity** (2003) and Rigobon and Sack's **The Effects of War Risk on U.S. Financial Markets** (2003), with a transparent news NLP extension. Market observations end on **September 17, 2026**. This is a retrospective research study.
 
-The final application covers **9 original-paper-scope financial variables (including the Treasury anchor), 178 sessions, 1,029 eligible headlines, 515 war-relevant headlines, and 18 matched event/control pairs**. It is a direct Iran-2026 analogue of the Rigobon-Sack design: the war setting and news classification change, while the core US-market variable scope, event/control variance comparison, Treasury normalization, two IV estimators, and combined-instrument estimator follow the paper. The Treasury anchor is weak (IV1 robust first-stage F **0.886**; its second-moment shift has a block-bootstrap interval spanning zero). No signed-news association survives false-discovery correction. The conditional replication estimates are **exploratory**, not reliable causal Iran war-risk sensitivities. This analysis was not preregistered.
+The final application covers **8 outcomes comparable to the original paper plus the two-year Treasury anchor (9 series total), 178 sessions, 1,029 eligible headlines, 515 war-relevant headlines, and 18 matched event/control pairs**. The original Treasury liquidity-premium outcome is unavailable in comparable public 2026 data. This is an Iran-2026 application of the Rigobon-Sack design: the event/control variance comparison, Treasury normalization, two IV estimators, and combined-instrument estimator follow the paper. The Treasury anchor is weak (IV1 robust first-stage F **0.886**; its second-moment shift has a block-bootstrap interval spanning zero). No signed-news association survives false-discovery correction. The conditional replication estimates are **exploratory**, not reliable causal Iran war-risk sensitivities. This analysis was not preregistered.
 
 **Interpretation:** The inability of this specification to isolate a precise causal effect does not mean the war had no market effect. On March 2, the first US session after the February 28 outbreak, Brent spot rose **$5.92/bbl** and the US two-year Treasury yield rose **9 bp**. Brent rose another **$6.04/bbl** on March 3. These are observed, coincident movements, not estimates of how much of the change the war caused. The March 5 matched control also saw a **$7.03/bbl** Brent increase despite lower measured news innovation, illustrating the difficulty of finding genuinely low-war-risk days during active conflict.
 
@@ -34,7 +38,7 @@ Downloaded data are cached in `data/raw`. News collection proceeds serially with
 
 The reproduction ZIP includes the extracted article input, downloaded financial/NLP data, scripts, and outputs; it omits bulky archived HTML and installed libraries. To reproduce the delivered vintage, install requirements and run **analyze, validate, build_report** against the included cache without rerunning the downloaders. A later fresh download can contain revised sources and headline edits.
 
-The desktop execution used bundled Python and workspace-local analysis libraries under `tmp/pythonpackages`. Scripts also run with normally installed packages. Random seeds and bootstrap replication counts are fixed in the code.
+Install the versions listed in `requirements.txt` for a fresh environment. Random seeds and bootstrap replication counts are fixed in the code.
 
 ## Design and interpretation
 
@@ -63,4 +67,4 @@ The supplied papers are retained unchanged at the repository root. Raw download 
 
 Treasury constant-maturity yields replace estimated off-the-run par yields; ICE option-adjusted spreads replace the original credit spreads; Brent spot replaces year-ahead oil futures. No comparable public 2026 on-the-run/off-the-run liquidity-premium series was obtained, so that original outcome is explicitly omitted. The broad dollar definition and gold measurement also differ. The 2026 sample includes both anticipation and realized war, whereas the original main sample focused on the buildup to the Iraq war.
 
-Raw newspaper and financial data retain their source owners' rights, including ICE and Yahoo/provider restrictions. The local cache is for this user's research; this repository does not grant republication rights to source data. Estimates and uncertainty must be read with the report's identification findings.
+Raw newspaper and financial data retain their source owners' rights, including ICE and Yahoo/provider restrictions. This repository does not grant republication rights to source data. Estimates and uncertainty must be read with the report's identification findings.

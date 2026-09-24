@@ -1,5 +1,6 @@
 """Build the research report from final saved estimates, without hidden recalculation."""
 import sys,json,re,math
+from html import unescape
 from pathlib import Path
 from xml.sax.saxutils import escape
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'tmp/pythonpackages'))
@@ -33,6 +34,8 @@ for ax,(keys,label) in zip(axes,groups):
 fig.suptitle('Signed-news associations with 95% HAC intervals',color=GREEN,fontsize=12);fig.tight_layout();fig.savefig(FIG/'news_sensitivity_intervals.png',dpi=190);plt.close(fig)
 styles=getSampleStyleSheet()
 styles.add(ParagraphStyle(name='ReportTitle',fontName='Helvetica-Bold',fontSize=25,leading=29,textColor=colors.HexColor(GREEN),spaceAfter=13))
+styles.add(ParagraphStyle(name='CoverTitle',fontName='Helvetica-Bold',fontSize=30,leading=35,textColor=colors.HexColor(GREEN),spaceAfter=18))
+styles.add(ParagraphStyle(name='CoverSubtitle',fontName='Helvetica',fontSize=15,leading=20,textColor=colors.HexColor(GREY),spaceAfter=28))
 styles.add(ParagraphStyle(name='Subhead',fontName='Helvetica-Bold',fontSize=14,leading=18,textColor=colors.HexColor(GREEN),spaceBefore=11,spaceAfter=7))
 styles.add(ParagraphStyle(name='BodyR',fontName='Helvetica',fontSize=10.5,leading=14.5,spaceAfter=8,textColor=colors.HexColor('#242c29')))
 styles.add(ParagraphStyle(name='SmallR',fontName='Helvetica',fontSize=8.3,leading=11.1,spaceAfter=6,textColor=colors.HexColor(GREY)))
@@ -40,7 +43,12 @@ styles.add(ParagraphStyle(name='TableR',fontName='Helvetica',fontSize=8.3,leadin
 styles.add(ParagraphStyle(name='TableH',fontName='Helvetica-Bold',fontSize=8.3,leading=10.6,textColor=colors.white))
 story=[];sections=[];md=[]
 def txt(t):return escape(str(t))
-def para(t,small=False):story.append(Paragraph(t,styles['SmallR' if small else 'BodyR']));md.append(re.sub('<[^>]+>','',t)+'\n')
+def markdown_text(t):
+    t=re.sub(r'<link href="([^"]+)"[^>]*>(.*?)</link>',lambda m:'['+m.group(2)+']('+unescape(m.group(1))+')',t)
+    t=re.sub(r'<br\s*/?>','  \n',t)
+    for tag,mark in [('b','**'),('i','*')]:t=t.replace('<'+tag+'>',mark).replace('</'+tag+'>',mark)
+    return unescape(re.sub(r'<[^>]+>','',t))
+def para(t,small=False):story.append(Paragraph(t,styles['SmallR' if small else 'BodyR']));md.append(markdown_text(t)+'\n')
 def sub(t):story.append(Paragraph(txt(t),styles['Subhead']));md.append('### '+t+'\n')
 def section(t):
     if story:story.append(PageBreak())
@@ -50,7 +58,7 @@ def table(headers,rows,widths):
         return '<link href="'+escape(x['href'],{'"':'&quot;'})+'" color="'+GREEN+'">'+txt(x['label'])+'</link>' if isinstance(x,dict) else txt(x)
     cells=[[Paragraph(txt(x),styles['TableH']) for x in headers]]+[[Paragraph(cell(x),styles['TableR']) for x in row] for row in rows]
     T=Table(cells,colWidths=widths,repeatRows=1,hAlign='LEFT');T.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor(GREEN)),('VALIGN',(0,0),(-1,-1),'TOP'),('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.white,colors.HexColor(LIGHT)]),('LEFTPADDING',(0,0),(-1,-1),6),('RIGHTPADDING',(0,0),(-1,-1),6),('TOPPADDING',(0,0),(-1,-1),5),('BOTTOMPADDING',(0,0),(-1,-1),5),('LINEBELOW',(0,0),(-1,0),.5,colors.HexColor(GREEN))]));story.append(T);story.append(Spacer(1,8))
-    def mdcell(x):return '['+x['label']+']('+x['href']+')' if isinstance(x,dict) else re.sub('<[^>]+>','',str(x))
+    def mdcell(x):return '['+x['label']+']('+x['href']+')' if isinstance(x,dict) else markdown_text(str(x))
     md.append('| '+' | '.join(headers)+' |\n| '+' | '.join(['---']*len(headers))+' |\n'+'\n'.join('| '+' | '.join(mdcell(x) for x in row)+' |' for row in rows)+'\n')
 def figure(name):story.append(Image(str(FIG/name),width=512,height=512*plt.imread(FIG/name).shape[0]/plt.imread(FIG/name).shape[1]));story.append(Spacer(1,5))
 def num(x,n=2):return f'{float(x):,.{n}f}'
@@ -63,11 +71,25 @@ def ytd(k):
     d=lev[k].dropna();base=d.loc[:'2025-12-31'].iloc[-1];last=d.iloc[-1]
     return base,last,str(d.index[-1].date())
 
-section('Iran war risk and financial sensitivities in 2026')
-para('<b>Rigobon-Sack replication with Iran replacing Iraq, plus an NLP extension</b><br/>January 2 to September 17, 2026 | Revised September 22, 2026')
-para('The core exercise keeps the original paper\'s event/control heteroskedasticity design, US-market outcome scope, two-year Treasury normalization, two single-instrument estimators, and combined-IV estimator. Iran-war news in 2026 replaces Iraq-war news; documented public-data proxies replace unavailable original financial series.')
+REPO_URL='https://github.com/victor4628/FRE7871-A3-War-Risk'
+AUTHOR='Victor Chen'
+STUDENT_ID='yc8027'
+story.append(Spacer(1,90))
+story.append(Paragraph('Iran War Risk and U.S. Financial Markets',styles['CoverTitle']))
+story.append(Paragraph('An application of Rigobon and Sack (2003) to the 2026 Iran conflict',styles['CoverSubtitle']))
+story.append(Paragraph('<b>Victor Chen</b><br/>NYU NetID: yc8027',styles['BodyR']))
+story.append(Spacer(1,12))
+story.append(Paragraph('<b>GitHub repository</b><br/><link href="'+REPO_URL+'" color="'+GREEN+'">'+REPO_URL+'</link>',styles['BodyR']))
+story.append(Spacer(1,42))
+story.append(Paragraph('Abstract',styles['Subhead']))
+story.append(Paragraph('This report applies the heteroskedasticity identification design in <i>The Effects of War Risk on U.S. Financial Markets</i> to Iran-war news and daily U.S. market data in 2026. Headline analysis selects high-news and nearby lower-news dates. The study reproduces the paper\'s two single-instrument estimates and combined-IV estimate using available financial series, and reports standard errors and weak-identification diagnostics.',styles['BodyR']))
+story.append(Paragraph('Markets moved substantially around the conflict, especially oil. The two-year Treasury variance shift is too weak to assign a precise causal sensitivity to a single Iran war-risk factor. These results document the limits of this replication while preserving the observed market response.',styles['BodyR']))
+md.extend(['# Iran War Risk and U.S. Financial Markets\n','An application of Rigobon and Sack (2003) to the 2026 Iran conflict\n','**Victor Chen** | NYU NetID: yc8027\n','Repository: '+REPO_URL+'\n','## Abstract\n','This report applies the heteroskedasticity identification design in The Effects of War Risk on U.S. Financial Markets to Iran-war news and daily U.S. market data in 2026. Headline analysis selects high-news and nearby lower-news dates. The study reproduces the paper\'s two single-instrument estimates and combined-IV estimate using available financial series, and reports standard errors and weak-identification diagnostics.\n','Markets moved substantially around the conflict, especially oil. The two-year Treasury variance shift is too weak to assign a precise causal sensitivity to a single Iran war-risk factor. These results document the limits of this replication while preserving the observed market response.\n'])
+
+section('Executive summary')
+para('The core exercise follows the original paper\'s event/control heteroskedasticity design, two-year Treasury normalization, two single-instrument estimators, and combined-IV estimator. Iran-war news in 2026 replaces Iraq-war news; documented public-data proxies replace unavailable original financial series.')
 para('<b>Main finding:</b> markets moved substantially around Iran-war developments, but this study cannot determine how much was caused by one Iran war-risk factor. The two-year Treasury anchor is weak, normalized estimates vary across instruments and events, and signed-news associations do not survive multiple-comparison correction. This does not show that the war had no market effect.')
-table(['Coverage','Final study'],[['Financial variables','9 including the Treasury anchor; original-paper scope'],['Observed US sessions','178'],['News archive coverage','260 calendar days, no failed dates'],['Collected / eligible / war-relevant headlines','1,601 / 1,029 / 515'],['Matched event / control days','18 / 18; fewer pairs for some outcomes']],[178,334])
+table(['Coverage','Final study'],[['Financial variables','8 comparable outcomes plus the two-year Treasury anchor'],['Observed US sessions','178'],['News archive coverage','260 calendar days, no failed dates'],['Collected / eligible / war-relevant headlines','1,601 / 1,029 / 515'],['Matched event / control days','18 / 18; fewer pairs for some outcomes']],[178,334])
 sub('Observed market changes are substantial')
 rows=[]
 for k in ['DGS2','DGS10','SP500','DCOILBRENTEU','BAMLH0A0HYM2','GLD']:
@@ -90,7 +112,7 @@ para('The news classifier identifies Iran war coverage, classifies threats, real
 para('The factor scale is arbitrary. Multiplying each relative loading by -25 bp reproduces the original table normalization. In 2026 this is a conditional Treasury-yield scenario, not a verified increase in war probability. The loadings capture total contemporaneous market responses, including spillovers; they do not separate direct effects from transmission between assets.',small=True)
 
 section('The financial dataset and replication departures')
-para('Public daily observations are frozen at the retrieved September 18 vintage. The common session calendar contains days with both Treasury and S&amp;P observations. No missing outcome is forward-filled; an event/control pair is dropped for an outcome if either daily change is unavailable.')
+para('The analysis uses a fixed snapshot of public daily observations, with retrieval details preserved in the source manifests. The common session calendar contains days with both Treasury and S&amp;P observations. No missing outcome is forward-filled; an event/control pair is dropped for an outcome if either daily change is unavailable.')
 rows=[]
 for _,z in cov.iterrows():rows.append([z.variable,z.series,z.unit,str(z.observed_changes)])
 table(['Variable','Identifier','Change unit','N'],rows,[235,137,90,50])
@@ -151,7 +173,7 @@ for day,(desc,needle) in EVENTS.items():
     event_rows.append({'event_session':day,'description':desc,'representative_article_url':z.url,'article_archive_date':z.archive_date,'control_session':str(pairs.set_index('H').loc[pd.Timestamp(day),'L'].date())})
 pd.DataFrame(event_rows).to_csv(A/'event_sources.csv',index=False)
 
-section('Conditional sensitivities replicating Table 2')
+section('Table 2: Market Sensitivities')
 para('<b>Scenario:</b> a latent-factor movement associated with a 25 bp decline in the US two-year yield. These estimates are supplied to replicate the original calculations; weak identification prevents treating them as calibrated increases in Iran war risk. An apparently precise combined-IV standard error does not resolve weak identification.')
 rows=[]
 for _,z in r.iterrows():rows.append([z.variable,z.unit,str(z.pairs),estse(z,'e1'),estse(z,'e2'),estse(z,'e3')])
@@ -182,7 +204,7 @@ para('The 2003 paper found weaker equities, wider low-grade spreads, lower Treas
 para('Energy disruption could raise inflation pressure and yields while growth fears could lower them. This is an economic interpretation of competing channels, not an identified decomposition in this study. Under the covariance-only estimator the shock direction remains ambiguous, and the weak Treasury denominator magnifies that ambiguity.')
 para('Consequently, the paper\'s 2003 elasticities should not be used as 2026 Iran portfolio stress parameters. The replicated 2026 point estimates are diagnostic outputs pending stronger identification, not replacement calibrated stress parameters.',small=True)
 
-section('Conditional variance calculations replicating Table 3')
+section('Table 3: Variance Calculations')
 para('The paper\'s predicted shift for outcome j is d(j) squared times the anchor second-moment shift. The H share divides this by the observed H second moment. The all-session calculation divides the matched-event contribution by the sum of daily squared changes across available 2026 sessions. These are conditional algebraic calculations; causal lower-bound interpretation additionally requires valid identification and serial independence.')
 rows=[]
 for _,z in v.iterrows():rows.append([z.variable,num(z.L_second_moment,3),num(z.H_second_moment,3),num(z.predicted_variance_shift,3),num(z.raw_H_share_pct,1),num(z.raw_all_share_pct,1)])
@@ -210,7 +232,7 @@ para('The independent signed-news regressions also use next-session timing and a
 para('FRED spot oil, Treasury, broad-dollar, and equity observations are not synchronized intraday. This timing limitation remains even after restricting the main table to the original paper\'s US-market scope.',small=True)
 
 section('What the evidence supports')
-para('<b>The 2026 Iran conflict coincides with substantial news intensity and market changes, but the requested public-data application does not isolate a precise single war-risk factor.</b> The March 2-3 Brent rise documents a large market move around the outbreak. The failed identification and statistically inconclusive signed-news regressions concern this model\'s ability to attribute and size the effect; they do not show that war had no financial effect.')
+para('<b>The 2026 Iran conflict coincides with substantial news intensity and market changes, but this public-data application does not isolate a precise single war-risk factor.</b> The March 2-3 Brent rise documents a large market move around the outbreak. The failed identification and statistically inconclusive signed-news regressions concern this model\'s ability to attribute and size the effect; they do not show that war had no financial effect.')
 sub('Use the estimates as research diagnostics')
 para('The original model\'s Treasury normalization is weak in this application. Some conditional estimates point in different directions across instruments or event definitions. The variance shares depend on those same unstable loadings. Therefore they cannot serve as reliable portfolio stress coefficients or as an attribution of year-to-date market returns.')
 sub('Separate the most relevant channels in a stronger design')
@@ -218,25 +240,25 @@ para('A subsequent structural extension should distinguish threat and escalation
 sub('The data that would most improve identification')
 para('A licensed corpus of full news texts with original publication timestamps would allow semantic actor, event, novelty, and direction coding, source-balanced daily denominators, and multilingual coverage. Classifier scores should be checked against a held-out human-coded sample. News windows should be aligned to market closing times and screened for overlapping macro announcements without using market returns to select events.')
 para('Intraday oil-futures curves, inflation-linked and nominal yields, credit instruments, and the original Treasury liquidity measure would reduce proxy and timing differences. Any alternative anchor must show a strong variance shift and have its shock sign established using independent news. An oil anchor could be useful for an energy-disruption factor, but would not by itself identify broader war risk.')
-para('The delivered cache, scripts, and tables provide the empirical baseline for those extensions. They retain all final labels, selections, and weak-identification results so another researcher can examine the design and replace assumptions transparently.',small=True)
+para('The repository contains the data snapshot, scripts, and tables for independent examination of event labels, estimator assumptions, and uncertainty calculations.',small=True)
 
 section('Sources and reproducibility')
-para('<b>Supplied references</b><br/>Rigobon, Roberto (2003). Identification through Heteroskedasticity. The Review of Economics and Statistics 85(4), 777-792. Supplied PDF, 16 pages.<br/>Rigobon, Roberto and Brian Sack (2003). The Effects of War Risk on U.S. Financial Markets. NBER Working Paper 9609, April. Supplied PDF, 16 pages. Methods on PDF pages 4-8; normalization and interpretation on pages 9-11; Tables 1-3 on pages 14-16.')
+para('<b>References</b><br/>Rigobon, Roberto (2003). "Identification through Heteroskedasticity." <i>The Review of Economics and Statistics</i> 85(4), 777-792.<br/>Rigobon, Roberto and Brian Sack (2003). "The Effects of War Risk on U.S. Financial Markets." NBER Working Paper No. 9609. The event-selection design and Tables 1-3 provide the basis for this application.')
 para('<b>News and NLP benchmark</b><br/>Guardian dated Iran-topic archive, January 1 to September 17, 2026. <link href="https://www.theguardian.com/world/iran">Guardian Iran archive</link>.<br/>Iacoviello, Matteo and Jonathan Tong (2026). The AI-GPR Index: Measuring Geopolitical Risk using Artificial Intelligence. Published monthly Iran-country series and methodology. <link href="https://www.matteoiacoviello.com/ai_gpr.html">Author data and paper</link>. This benchmark is descriptive and not an Iran-specific daily regressor.')
-para('<b>Financial data</b><br/>FRED daily series DGS2, DGS10, T10YIE, SP500, BAMLC0A4CBBB, BAMLH0A0HYM2, DCOILBRENTEU, and DTWEXBGS. Federal Reserve, EIA, S&amp;P, and ICE BofA source series accessed via <link href="https://fred.stlouisfed.org">FRED</link>.<br/>Yahoo Finance daily adjusted-close history for GLD. All observations were downloaded September 18, 2026; the market sample ends September 17, with an earlier latest observation for Brent.')
+para('<b>Financial data</b><br/>FRED daily series DGS2, DGS10, T10YIE, SP500, BAMLC0A4CBBB, BAMLH0A0HYM2, DCOILBRENTEU, and DTWEXBGS. Federal Reserve, EIA, S&amp;P, and ICE BofA source series accessed via <link href="https://fred.stlouisfed.org">FRED</link>.<br/>Yahoo Finance daily adjusted-close history for GLD. The market sample ends September 17, 2026, with an earlier last observation for Brent. Download times and source URLs are recorded in the repository manifests.')
 para('<b>Macro calendars</b><br/><link href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">Federal Reserve FOMC calendar</link>; <link href="https://www.bls.gov/schedule/news_release/cpi.htm">BLS CPI calendar</link>; <link href="https://www.bls.gov/schedule/news_release/empsit.htm">BLS employment calendar</link>. Dates are preserved in summary.json and analyze.py.')
 sub('Reproduce and inspect')
+para('<b>Code, data, and report</b><br/><link href="'+REPO_URL+'">'+REPO_URL+'</link>')
 para('README.md explains execution and departures. The scripts retrieve sources, score headlines, select H/L pairs, estimate all models, test algebra and units, and build this report from saved estimates. The principal tables are table2_sensitivities.csv, table3_variance.csv, and news_associations.csv. Source manifests record URLs and hashes. Bootstrap seeds are fixed; the main estimator uses 1,999 draws, and robustness tables use 399 draws.')
 para('Validation recovered known positive and negative factor loadings in simulated data, verified equality of IV1 and the covariance ratio, checked disjoint matching and macro exclusions, checked basis-point conversions and the shock scale, and confirmed complete archive coverage. Verification establishes implementation correctness, not economic identification.',small=True)
-para('Public source data retain their original owners\' rights. The local research cache is not a grant to republish newspaper text, ICE statistics, or other licensed provider data.',small=True)
 
 def footer(canvas,doc):
-    canvas.saveState();canvas.setStrokeColor(colors.HexColor(GREEN));canvas.setLineWidth(.55);canvas.line(50,43,562,43);canvas.setFont('Helvetica',8);canvas.setFillColor(colors.HexColor(GREY));canvas.drawString(50,30,'Iran war risk in 2026 | Empirical research');canvas.drawRightString(562,30,str(doc.page));canvas.restoreState()
+    canvas.saveState();canvas.setStrokeColor(colors.HexColor(GREEN));canvas.setLineWidth(.55);canvas.line(50,43,562,43);canvas.setFont('Helvetica',8);canvas.setFillColor(colors.HexColor(GREY));canvas.drawString(50,30,'Victor Chen | yc8027');canvas.drawRightString(562,30,str(doc.page));canvas.restoreState()
 dest=PDF/'iran_war_risk_2026.pdf'
-doc=SimpleDocTemplate(str(dest),pagesize=(612,792),rightMargin=50,leftMargin=50,topMargin=48,bottomMargin=60,title='Iran war risk and financial sensitivities in 2026',author='Research analysis',subject='Heteroskedasticity identification and news NLP empirical replication')
+doc=SimpleDocTemplate(str(dest),pagesize=(612,792),rightMargin=50,leftMargin=50,topMargin=48,bottomMargin=60,title='Iran War Risk and U.S. Financial Markets',author=AUTHOR,subject='Iran-war application of Rigobon and Sack (2003)')
 doc.build(story,onFirstPage=footer,onLaterPages=footer)
 (OUT/'iran_war_risk_2026.md').write_text('\n'.join(md),encoding='utf-8')
 from pypdf import PdfReader
 pages=PdfReader(dest).pages
-qa={'pages':len(pages),'sections':sections,'text_characters':[len(p.extract_text() or '') for p in pages]}
+qa={'pages':len(pages),'cover_title':'Iran War Risk and U.S. Financial Markets','sections':sections,'text_characters':[len(p.extract_text() or '') for p in pages]}
 (A/'report_structure.json').write_text(json.dumps(qa,indent=2));print(dest);print(json.dumps(qa,indent=2))
